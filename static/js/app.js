@@ -376,10 +376,126 @@ function clearChatArea() {
   chatWindow.innerHTML = "";
 }
 
+function getTimeNow() {
+  return new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" });
+}
+
+function formatBotMessage(text) {
+  if (!text) return "<p>No response.</p>";
+
+  // Escape HTML
+  const esc = (s) => {
+    const d = document.createElement("div");
+    d.textContent = s;
+    return d.innerHTML;
+  };
+
+  const lines = text.split("\n");
+  const out = [];
+  let inUl = false;
+  let inOl = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i];
+    const trimmed = line.trim();
+
+    // Close lists on blank line
+    if (trimmed === "") {
+      if (inUl) { out.push("</ul>"); inUl = false; }
+      if (inOl) { out.push("</ol>"); inOl = false; }
+      out.push('<div class="msg-spacer"></div>');
+      continue;
+    }
+
+    // Markdown heading: ## Title
+    if (/^#{1,3}\s+/.test(trimmed)) {
+      if (inUl) { out.push("</ul>"); inUl = false; }
+      if (inOl) { out.push("</ol>"); inOl = false; }
+      const headText = trimmed.replace(/^#{1,3}\s+/, "");
+      out.push(`<h4 class="msg-heading">${inlineFormat(headText)}</h4>`);
+      continue;
+    }
+
+    // Numbered heading: "1. **Title**" — bold numbered section
+    if (/^\d+\.\s+\*\*/.test(trimmed)) {
+      if (inUl) { out.push("</ul>"); inUl = false; }
+      if (inOl) { out.push("</ol>"); inOl = false; }
+      out.push(`<h4 class="msg-heading">${inlineFormat(trimmed)}</h4>`);
+      continue;
+    }
+
+    // Bullet list item
+    if (/^[-*•]\s+/.test(trimmed)) {
+      if (inOl) { out.push("</ol>"); inOl = false; }
+      if (!inUl) { out.push("<ul>"); inUl = true; }
+      const itemText = trimmed.replace(/^[-*•]\s+/, "");
+      out.push(`<li>${inlineFormat(itemText)}</li>`);
+      continue;
+    }
+
+    // Numbered list item: "1. text" (no bold)
+    const olMatch = trimmed.match(/^(\d+)\.\s+(.+)$/);
+    if (olMatch && !/\*\*/.test(olMatch[2].slice(0, 30))) {
+      if (inUl) { out.push("</ul>"); inUl = false; }
+      if (!inOl) { out.push("<ol>"); inOl = true; }
+      out.push(`<li>${inlineFormat(olMatch[2])}</li>`);
+      continue;
+    }
+
+    // Normal paragraph line
+    if (inUl) { out.push("</ul>"); inUl = false; }
+    if (inOl) { out.push("</ol>"); inOl = false; }
+    out.push(`<p>${inlineFormat(trimmed)}</p>`);
+  }
+
+  if (inUl) out.push("</ul>");
+  if (inOl) out.push("</ol>");
+
+  return out.join("");
+}
+
+function inlineFormat(text) {
+  // Escape then apply inline markdown
+  const esc = (s) => {
+    const d = document.createElement("div");
+    d.textContent = s;
+    return d.innerHTML;
+  };
+  let s = esc(text);
+  // Bold
+  s = s.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  // Italic
+  s = s.replace(/\*([^\s*][^*]*?)\*/g, "<em>$1</em>");
+  // Inline code
+  s = s.replace(/`([^`]+)`/g, '<code class="inline-code">$1</code>');
+  return s;
+}
+
 function appendMessage(type, text) {
   const div = document.createElement("div");
-  div.className = type === "user" ? "user-msg" : "bot-msg";
-  div.textContent = text;
+
+  if (type === "user") {
+    div.className = "user-msg";
+    const body = document.createElement("div");
+    body.className = "msg-body";
+    body.textContent = text;
+    const time = document.createElement("div");
+    time.className = "msg-time user-time";
+    time.textContent = getTimeNow();
+    div.appendChild(body);
+    div.appendChild(time);
+  } else {
+    div.className = "bot-msg";
+    const header = document.createElement("div");
+    header.className = "bot-msg-header";
+    header.innerHTML = `<span class="bot-avatar">&#9883;</span><span class="bot-label">MindSync AI</span><span class="msg-time">` + getTimeNow() + `</span>`;
+    const body = document.createElement("div");
+    body.className = "msg-body msg-formatted";
+    body.innerHTML = formatBotMessage(text);
+    div.appendChild(header);
+    div.appendChild(body);
+  }
+
   chatWindow.appendChild(div);
   chatWindow.scrollTop = chatWindow.scrollHeight;
 }
@@ -409,8 +525,14 @@ async function sendMessage() {
   userInput.value = "";
 
   const thinking = document.createElement("div");
-  thinking.className = "bot-msg";
-  thinking.textContent = "MindSync is thinking...";
+  thinking.className = "bot-msg typing-bubble";
+  thinking.innerHTML = `
+    <div class="bot-msg-header">
+      <span class="bot-avatar">&#9883;</span>
+      <span class="bot-label">MindSync AI</span>
+    </div>
+    <div class="typing-indicator"><span></span><span></span><span></span></div>
+  `;
   chatWindow.appendChild(thinking);
   chatWindow.scrollTop = chatWindow.scrollHeight;
 
@@ -421,15 +543,18 @@ async function sendMessage() {
       message: message
     });
 
+    thinking.remove();
+
     if (response.error) {
-      thinking.textContent = response.error;
+      appendMessage("bot", response.error);
     } else {
-      thinking.textContent = response.response;
+      appendMessage("bot", response.response);
       lastBotMessage = response.response;
       speak(lastBotMessage);
     }
   } catch (err) {
-    thinking.textContent = "Error connecting to MindSync AI.";
+    thinking.remove();
+    appendMessage("bot", "Error connecting to MindSync AI.");
   }
 
   loadPatients();

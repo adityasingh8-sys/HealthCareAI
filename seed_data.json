@@ -1,0 +1,437 @@
+[
+  {
+    "id": "pat-0001",
+    "name": "Rahul Sharma",
+    "age": "28",
+    "gender": "Male",
+    "sessions": [
+      {
+        "id": "ses-0001-1",
+        "name": "Initial Consultation",
+        "created_at": "03/01/2025 - 09:15",
+        "messages": [
+          {
+            "type": "user",
+            "text": "I have been feeling very anxious for the past 3 months. My heart races constantly and I cannot focus at work."
+          },
+          {
+            "type": "bot",
+            "text": "**Chief Complaint:** Anxiety, Palpitations, Poor Concentration — 3 months duration\n\nThank you for reaching out, Rahul. Based on your presentation, I want to conduct a structured assessment before concluding anything.\n\n**Differential Diagnoses to Consider:**\n- Generalized Anxiety Disorder (GAD)\n- Work-related Burnout Syndrome\n- Subclinical Hyperthyroidism (must rule out)\n- Caffeine-induced Anxiety\n\n**Clinical Questions:**\n1. Any recent life changes — new job, promotion, financial pressure?\n2. Sleep duration and quality — hours per night?\n3. Daily caffeine intake?\n4. Family history of anxiety or cardiac conditions?\n\n**Immediate Recommendations:**\n- Begin 4-7-8 diaphragmatic breathing twice daily\n- Reduce caffeine to maximum 1 cup before noon\n- Start a daily symptom and mood journal\n\nWe will build your complete care plan once I have answers to the above. Please log your anxiety episodes and sleep hours this week."
+          },
+          {
+            "type": "user",
+            "text": "I got promoted 3 months ago and the pressure is immense. I sleep only 4 to 5 hours. I drink 4 to 5 cups of coffee daily."
+          },
+          {
+            "type": "bot",
+            "text": "**Assessment — Clinical Picture is Clear**\n\nThe correlation is direct and unambiguous. Promotion-induced occupational stress, combined with chronic sleep deprivation and high caffeine load, creates a perfect neurochemical storm for anxiety.\n\n**Primary Diagnosis:** Work-related Anxiety Disorder with Secondary Insomnia\n**Severity:** Moderate (estimated GAD-7: 12–14)\n**Contributing Factors:** Sleep < 5h, Caffeine > 400mg/day, Elevated occupational stress\n\n**Structured Management Plan:**\n\n**Priority 1 — Sleep Correction**\n- Fixed sleep window: 11:00 PM to 6:30 AM — non-negotiable\n- No screens 45 minutes before bed (blue light suppresses melatonin)\n- Magnesium Glycinate 200mg at bedtime (OTC — reduces cortisol, improves sleep depth)\n\n**Priority 2 — Caffeine Tapering**\n- Week 1: Reduce to 3 cups\n- Week 2: Reduce to 2 cups, none after 1 PM\n- Week 3: Maximum 1 cup, before 11 AM\n\n**Priority 3 — Work Boundary Setting**\n- Use the Eisenhower Priority Matrix daily\n- Set a hard stop time at 7 PM — no work emails after\n- Take one 10-minute outdoor walk after lunch\n\n**Follow-up in 7 days.** Bring your sleep log and mood scores."
+          }
+        ]
+      },
+      {
+        "id": "ses-0001-2",
+        "name": "Week 1 Follow-up",
+        "created_at": "10/01/2025 - 10:30",
+        "messages": [
+          {
+            "type": "user",
+            "text": "Sleep improved a little, around 6 hours now. Morning anxiety is still there but evenings are better."
+          },
+          {
+            "type": "bot",
+            "text": "**Week 1 Progress Review**\n\nIncreasing sleep from 4–5 hours to 6 hours in one week is clinically meaningful. Evening improvement confirms the caffeine tapering is working.\n\n**Current Assessment:** Moderate GAD — Improving trajectory\n\n**New Finding: Morning Anxiety**\nThis is caused by the cortisol awakening response (CAR) — a natural cortisol spike between 6–8 AM that is exaggerated in anxiety disorders.\n\n**Targeted Morning Protocol:**\n- Do NOT check your phone for the first 30 minutes after waking\n- Drink 500 ml water immediately on waking (dehydration amplifies cortisol)\n- Get 10 minutes of natural sunlight within 1 hour of waking\n- Eat breakfast within 60 minutes (blood sugar stability reduces morning anxiety)\n- Include complex carbohydrates: oats, whole wheat toast, banana\n\n**Supplement Addition:**\n- L-Theanine 200mg with your morning coffee — blunts caffeine jitteriness, promotes calm alertness without drowsiness\n\n**Progress Score: 5.5/10 — Improving steadily**\n\nContinue current protocol. Next review in 2 weeks."
+          },
+          {
+            "type": "user",
+            "text": "Should I take any medication for anxiety? My friend suggested alprazolam."
+          },
+          {
+            "type": "bot",
+            "text": "**Medication Discussion — Important**\n\nI strongly advise against Alprazolam at this stage. Let me explain why with clinical reasoning.\n\n**Why NOT Alprazolam:**\n- Benzodiazepines are NOT first-line for GAD in young adults per WHO and NICE guidelines\n- Dependency develops within 2–4 weeks of regular use\n- Rebound anxiety upon stopping is often worse than the original condition\n- Cognitive blunting will impair your work performance further\n\n**What the Evidence Supports Instead:**\n\n**Evidence-Based Non-Prescription Options:**\n- **Ashwagandha KSM-66 extract** 300mg twice daily — reduces cortisol by 27.9% in RCTs (Chandrasekhar et al., 2012)\n- **Magnesium Glycinate** 200–400mg at night — addresses magnesium deficiency (common in high-stress individuals)\n- **L-Theanine** 200mg AM — promotes alpha brain wave activity (calm alertness)\n\n**If No Improvement in 3 Weeks:**\nI will initiate a formal psychiatric evaluation and consider Escitalopram 5mg — an SSRI that is safe, non-habit-forming, and has strong evidence for GAD. This requires prescription.\n\nYour current trajectory does not warrant medication yet. Stay consistent with the lifestyle interventions — they are working."
+          }
+        ]
+      },
+      {
+        "id": "ses-0001-3",
+        "name": "3-Week Review — Cognitive Techniques",
+        "created_at": "24/01/2025 - 09:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "Sleep is now 7 hours consistently. General anxiety has reduced a lot. But I still panic during important meetings and presentations."
+          },
+          {
+            "type": "bot",
+            "text": "**3-Week Review — Excellent Clinical Progress**\n\nAchieving consistent 7-hour sleep and significantly reduced baseline anxiety in 3 weeks is outstanding. The remaining issue is now clearly situational.\n\n**Refined Diagnosis:** Situational Performance Anxiety (within Social Anxiety Disorder spectrum)\n**Overall Severity:** Mild (estimated GAD-7: 6–7) — down from 12–14 at intake\n\n**Targeted Intervention — Meeting and Presentation Anxiety:**\n\n**Pre-Meeting Protocol (start 30 minutes before):**\n1. Box breathing: 4 seconds in, 4 hold, 4 out, 4 hold — 4 full cycles\n2. Power posture for 2 minutes — research shows 15% cortisol reduction\n3. Write down 3 specific things you know well about the topic\n4. Remind yourself: nervousness and excitement have the same physiology — choose the label\n\n**During the Meeting:**\n- Feel the physical contact of your feet on the floor, back on the chair — this grounds the nervous system\n- Speak at 80% of your normal pace — anxiety accelerates speech and increases panic\n- Pausing to think is a sign of authority, not weakness\n\n**CBT Cognitive Restructuring:**\n- Automatic thought: \"I will embarrass myself\"\n- Challenge: What is the objective evidence for this? Have you embarrassed yourself in meetings before?\n- Reframe: \"I am well-prepared. Physiological activation means I care — that is an asset.\"\n\n**Continue current protocol. Next session: maintenance planning.**"
+          }
+        ]
+      },
+      {
+        "id": "ses-0001-4",
+        "name": "Maintenance Planning",
+        "created_at": "14/02/2025 - 11:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "Had a major board presentation last week. I was nervous but I managed it well and received good feedback."
+          },
+          {
+            "type": "bot",
+            "text": "**Maintenance Review — Week 6**\n\nSuccessfully delivering a board-level presentation with controlled anxiety is the clinical benchmark I was waiting for. This confirms you have internalized the regulation techniques.\n\n**Current Status:** Sub-clinical Anxiety — Functioning at full capacity\n\n**Transition to Self-Monitoring Protocol:**\n\nYou are being discharged from active treatment. I am placing you on a monthly self-monitoring framework.\n\n**Monthly Self-Check:**\n- Rate your weekly anxiety (1–10) every Sunday evening\n- If score exceeds 6 for more than 3 consecutive days — reconnect immediately\n- Sleep is your #1 protective factor — guard the 7-hour schedule fiercely\n\n**Long-term Wellness Architecture:**\n- Exercise 3–4 times per week — the most powerful anxiolytic known to medicine\n- Maintain social connections — isolation is the most reliable anxiety amplifier\n- Annual TSH blood test to rule out thyroid contribution\n- Annual PHQ-9 self-assessment for baseline mental health tracking\n\n**Prognosis:** Excellent. You identified the problem early, engaged fully, and built lasting skills. That is the difference between resolution and recurrence.\n\nWell done, Rahul."
+          }
+        ]
+      },
+      {
+        "id": "ses-0001-5",
+        "name": "Final Discharge Session",
+        "created_at": "28/02/2025 - 10:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "Checking in. Anxiety score is 2 to 3 this week. Started gym 3 times a week. Feeling like a different person."
+          },
+          {
+            "type": "bot",
+            "text": "**Final Assessment — Case Closed**\n\n**GAD-7 Estimated Score:** 3 (Minimal Anxiety) — down from estimated 14 at intake.\n\nThis is a textbook recovery. Starting strength training 3x/week is one of the best clinical decisions you could make.\n\n**Why Exercise Is Transformative for Anxiety:**\n- Raises BDNF (Brain-Derived Neurotrophic Factor) — the brain's own antidepressant\n- Reduces basal cortisol levels chronically\n- Improves sleep architecture (deep sleep %)\n- Builds self-efficacy — the single strongest buffer against anxiety relapse\n\n**Summary of What Drove Your Recovery:**\n1. Sleep correction (4h → 7h) — the foundational intervention\n2. Caffeine tapering — removed a direct chemical anxiety trigger\n3. Morning protocol — disrupted the cortisol awakening response cycle\n4. Pre-meeting breathing and CBT — gave you real-time regulation tools\n5. Exercise — long-term neurobiological restructuring\n\n**Case Status:** Closed — Full Recovery\n**Recommendation:** Annual check-in. No medications required. No further sessions needed.\n\nYou did the hard work, Rahul. This outcome belongs to you."
+          }
+        ]
+      }
+    ],
+    "mood_logs": [
+      {"score": 3, "note": "Severe morning anxiety, heart racing", "timestamp": "03/01/2025 - 09:00"},
+      {"score": 4, "note": "Slightly better after breathing exercise", "timestamp": "10/01/2025 - 08:30"},
+      {"score": 5, "note": "Good sleep last night, calmer morning", "timestamp": "17/01/2025 - 09:15"},
+      {"score": 6, "note": "Meeting went okay, anxiety manageable", "timestamp": "24/01/2025 - 16:00"},
+      {"score": 7, "note": "Board presentation — nervous but handled it", "timestamp": "14/02/2025 - 18:00"},
+      {"score": 8, "note": "Gym day — feeling strong and calm", "timestamp": "28/02/2025 - 19:30"}
+    ]
+  },
+  {
+    "id": "pat-0002",
+    "name": "Priya Patel",
+    "age": "45",
+    "gender": "Female",
+    "sessions": [
+      {
+        "id": "ses-0002-1",
+        "name": "Initial Assessment — Diabetes & BP",
+        "created_at": "05/01/2025 - 11:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "I was recently diagnosed with Type 2 Diabetes and high blood pressure. My sugar was 210 fasting and BP was 150/95. I am very worried."
+          },
+          {
+            "type": "bot",
+            "text": "**Initial Assessment — New Diagnoses**\n\nPriya, first — thank you for coming in early after diagnosis. Many patients delay, which worsens outcomes significantly.\n\n**Current Clinical Picture:**\n- **Fasting Blood Glucose:** 210 mg/dL (Normal: <100, Diabetic: ≥126)\n- **Blood Pressure:** 150/95 mmHg (Stage 2 Hypertension per JNC 8)\n- **Risk Category:** Both conditions together significantly elevate cardiovascular risk — this must be managed aggressively\n\n**Investigations Required Immediately:**\n1. HbA1c (glycated haemoglobin — 3-month average sugar)\n2. Lipid profile (cholesterol, LDL, HDL, triglycerides)\n3. Kidney function test — eGFR and urine microalbumin\n4. ECG (baseline cardiac assessment)\n5. Eye examination (diabetic retinopathy screening)\n\n**Provisional Management:**\n- Metformin 500mg twice daily with meals (will titrate based on HbA1c)\n- Amlodipine 5mg once daily for blood pressure\n- Low-salt, low-glycaemic-index diet — I will detail this next session\n\n**Lifestyle is NON-NEGOTIABLE:**\n- 30 minutes brisk walking daily reduces both glucose and BP\n- Weight reduction of even 5–7% improves insulin sensitivity by 30–50%\n\nPlease get all investigations done within the next 5 days. Bring the reports to our next session."
+          },
+          {
+            "type": "user",
+            "text": "I am scared. Does this mean I will have to take medicine forever? Can it be reversed?"
+          },
+          {
+            "type": "bot",
+            "text": "**Addressing Your Concerns — Honestly**\n\nYour fear is completely understandable and I want to give you a clear, honest answer.\n\n**Can Type 2 Diabetes be reversed?**\nYes — in the early stages, with significant lifestyle change, it is possible to achieve remission. Studies (DiRECT trial, 2018) showed 46% of patients achieved remission at 1 year through weight loss alone. At a fasting glucose of 210, you are newly diagnosed — this is the best time to intervene.\n\n**Conditions for Possible Remission:**\n- Lose 10–15% of body weight (if overweight)\n- Follow a Mediterranean or low-carbohydrate diet strictly\n- Exercise 150 minutes per week minimum\n- Reduce stress (cortisol directly raises blood glucose)\n\n**Realistic Expectations:**\n- If you make full lifestyle changes: Possible reduction or elimination of medication in 6–12 months\n- If partial changes: Medication will be needed long-term, but at low doses\n- Blood pressure may normalize with weight loss and diet alone\n\n**What I Need From You:**\n- Full commitment to the dietary and exercise plan I will give you\n- Regular monitoring: Check fasting glucose at home every morning\n- Don't miss medications — complications (kidney damage, blindness, nerve damage) develop silently without medication control\n\nYou are not powerless here, Priya. Your choices in the next 6 months will define your next 30 years."
+          }
+        ]
+      },
+      {
+        "id": "ses-0002-2",
+        "name": "Lab Results Review",
+        "created_at": "12/01/2025 - 10:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "I got my reports. HbA1c is 8.2%, cholesterol is 220 mg/dL, LDL 145, kidney function is normal, ECG is normal."
+          },
+          {
+            "type": "bot",
+            "text": "**Lab Results Analysis**\n\n**HbA1c: 8.2%**\n- Normal: <5.7% | Pre-diabetic: 5.7–6.4% | Diabetic target: <7%\n- Your value means average blood glucose of approximately 189 mg/dL over 3 months\n- Target: Bring HbA1c below 7% within 3 months — achievable with medication + diet\n\n**Lipid Profile:**\n- Total Cholesterol 220 mg/dL (Borderline High — target <200)\n- LDL 145 mg/dL (High — target <100 for diabetics per ADA guidelines)\n- This combination with diabetes creates significant cardiovascular risk\n\n**Updated Treatment Plan:**\n\n**Medications:**\n- Metformin 500mg twice daily — continue\n- **Add: Atorvastatin 10mg** at bedtime — to bring LDL below 100 mg/dL\n- Amlodipine 5mg — continue\n\n**Dietary Plan (Specific):**\n- Eliminate: White rice, white bread, potatoes, sugary drinks, fruit juices\n- Replace: Brown rice (50% less quantity), whole wheat roti, oats, quinoa\n- Protein at every meal: Eggs, dal, paneer, chicken, fish\n- Fats: Olive oil, nuts, avocado — these do NOT raise blood sugar\n- Rule: Fill half your plate with vegetables before anything else\n\n**Monitoring:**\n- Fasting glucose daily at 8 AM — log in diary\n- BP check every 3 days at home\n- Repeat HbA1c in 3 months\n\nKidney function and ECG being normal is excellent news — no organ damage yet. This is still entirely reversible."
+          }
+        ]
+      },
+      {
+        "id": "ses-0002-3",
+        "name": "Diet & Exercise Deep Dive",
+        "created_at": "26/01/2025 - 11:30",
+        "messages": [
+          {
+            "type": "user",
+            "text": "I have been following the diet mostly but finding it hard to exercise. My fasting glucose is now around 160 to 170. Blood pressure 138/88."
+          },
+          {
+            "type": "bot",
+            "text": "**3-Week Progress Review**\n\nFasting glucose coming down from 210 to 160–170 in 3 weeks purely from dietary changes is very encouraging. BP improving from 150/95 to 138/88 is also significant.\n\n**Assessment:** Responding well to intervention — continue current trajectory\n\n**Addressing Exercise Resistance:**\nI understand exercise feels difficult. Let me reframe it clinically: 30 minutes of brisk walking drops blood glucose by 20–30 mg/dL for the next 24 hours. It is, functionally, your most powerful medication — and it is free.\n\n**Exercise Plan — Starting Realistically:**\n\n**Week 1–2 (Foundation):**\n- 15-minute walk after dinner — just this, nothing else\n- Timing after meals is critical — post-meal walking reduces the glucose spike by 30%\n\n**Week 3–4 (Build):**\n- Morning: 10 minutes\n- After dinner: 20 minutes\n\n**Week 5+ (Target):**\n- 30–45 minutes total daily walking\n- Add 2x/week strength training (bodyweight squats, wall pushups) — muscle mass is the primary glucose disposal organ\n\n**The Numbers That Should Motivate You:**\n- Each kg of weight lost reduces HbA1c by approximately 0.1%\n- Losing 7 kg could bring your HbA1c from 8.2% to ~7.5%\n- Combined with medication, target of <7% within 3 months is very realistic\n\n**Next review in 4 weeks with fasting glucose log.**"
+          },
+          {
+            "type": "user",
+            "text": "I am also feeling very stressed and anxious because of all this. Affecting my sleep too."
+          },
+          {
+            "type": "bot",
+            "text": "**Psychological Impact — Critical to Address**\n\nThis is extremely important and I am glad you mentioned it. Stress and diabetes have a dangerous bidirectional relationship that most patients are not warned about.\n\n**How Stress Worsens Diabetes:**\n- Cortisol (stress hormone) directly raises blood glucose — stress alone can raise fasting glucose by 20–40 mg/dL\n- Sleep deprivation reduces insulin sensitivity by up to 25% in just 1 week\n- Anxiety increases cortisol chronically — creating a continuous glucose elevation cycle\n\n**This means:** Your blood sugar numbers may not reflect your diet alone — stress is raising them independently.\n\n**Stress Management for Diabetic Patients:**\n\n**Sleep (Priority #1):**\n- Aim for 7–8 hours — non-negotiable for glucose control\n- Take Magnesium Glycinate 300mg before bed — reduces cortisol and improves sleep quality\n\n**Stress Reduction:**\n- Progressive Muscle Relaxation (PMR) — 10 minutes before bed (YouTube guided)\n- Deep breathing 5 minutes after waking — lowers morning cortisol spike\n- Journaling: Write your 3 worries and 3 things in your control — reduces rumination\n\n**Support:**\n- Consider joining a diabetes support group — shared experience reduces illness-related anxiety significantly\n- If sleep and anxiety persist beyond 4 weeks, I will refer you to a psychologist for diabetes distress counselling\n\nYou are not alone in this. Diabetes distress is a recognised clinical condition and it is treatable."
+          }
+        ]
+      },
+      {
+        "id": "ses-0002-4",
+        "name": "3-Month HbA1c Review",
+        "created_at": "07/03/2025 - 10:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "New HbA1c is 7.4%, fasting glucose around 130 to 140, BP is 128/82. I have been walking 25 minutes daily."
+          },
+          {
+            "type": "bot",
+            "text": "**3-Month Review — Significant Progress**\n\n**Metrics Comparison:**\n\n| Parameter | January | March | Target |\n|---|---|---|---|\n| HbA1c | 8.2% | 7.4% | <7.0% |\n| Fasting Glucose | 210 mg/dL | 130–140 | <130 |\n| Blood Pressure | 150/95 | 128/82 | <130/80 |\n\nA 0.8% HbA1c reduction in 3 months is excellent — this is the rate seen in major clinical trials for Metformin alone. You have achieved this with medication PLUS lifestyle. Your BP is now at near-target.\n\n**What Changed:**\n- Diet change accounts for approximately 40% of glucose improvement\n- Medication accounts for approximately 40%\n- Exercise and stress management account for approximately 20%\n\n**Medication Adjustment:**\n- Metformin: Continue 500mg twice daily\n- Amlodipine: Continue 5mg\n- Atorvastatin: Continue 10mg — recheck lipids at 6 months\n\n**New Target for Next 3 Months:**\n- HbA1c below 7.0%\n- Fasting glucose below 120 mg/dL\n- Increase walking to 35–40 minutes daily\n- Add 2 days of light strength training\n\nYou are on a clear trajectory toward remission. If HbA1c reaches 6.5% in 6 months, we will discuss reducing medication."
+          }
+        ]
+      },
+      {
+        "id": "ses-0002-5",
+        "name": "Medication Side Effects Review",
+        "created_at": "21/03/2025 - 09:30",
+        "messages": [
+          {
+            "type": "user",
+            "text": "I have been having some stomach issues like nausea and loose motions since starting Metformin. Is this normal?"
+          },
+          {
+            "type": "bot",
+            "text": "**Metformin Gastrointestinal Side Effects — Very Common**\n\nYes, this is well-documented and affects 20–30% of patients, especially in the first few months. You are not having an adverse reaction — this is a known pharmacological side effect.\n\n**Why Metformin Causes GI Issues:**\n- Metformin increases gut serotonin, which accelerates intestinal motility\n- It also alters gut microbiome composition in the initial weeks\n- Usually resolves within 4–8 weeks as the body adapts\n\n**Management Strategies:**\n\n**Option 1 — Timing and Food (Try First):**\n- Take Metformin during the meal, not before or after\n- Take with the largest portion of the meal\n- Never take on an empty stomach\n\n**Option 2 — Dose Reduction (If still problematic):**\n- Temporarily reduce to 500mg once daily for 2 weeks\n- Then step back up to twice daily\n\n**Option 3 — Formulation Switch:**\n- Switch to Metformin XR (Extended Release) — GI side effects are 50% lower\n- Same efficacy, much better tolerability\n- I will update your prescription to Metformin XR 500mg if issues persist past 2 weeks\n\n**Red Flags — Return Immediately If:**\n- Severe abdominal pain or vomiting\n- Blood in stool\n- Symptoms of lactic acidosis: muscle weakness, difficulty breathing, unusual drowsiness\n\nThese are rare but serious. What you describe is typical adaptation. Try the timing adjustment first and report back in 1 week."
+          }
+        ]
+      },
+      {
+        "id": "ses-0002-6",
+        "name": "6-Month Comprehensive Review",
+        "created_at": "10/04/2025 - 11:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "Latest HbA1c is 6.8%, BP is 122/80, cholesterol is 178, LDL is 92. I have lost 6 kgs. Stomach issues resolved."
+          },
+          {
+            "type": "bot",
+            "text": "**6-Month Comprehensive Review — Exceptional Outcome**\n\n**Clinical Summary:**\n\n| Parameter | Baseline (Jan) | Now (Apr) | Target | Status |\n|---|---|---|---|---|\n| HbA1c | 8.2% | 6.8% | <7.0% | ACHIEVED |\n| Fasting Glucose | 210 | ~110–120 | <130 | ACHIEVED |\n| Blood Pressure | 150/95 | 122/80 | <130/80 | ACHIEVED |\n| LDL Cholesterol | 145 | 92 | <100 | ACHIEVED |\n| Weight | Baseline | -6 kg | -5 to 10% | ON TRACK |\n\nAll five targets achieved simultaneously. This is an exceptional clinical outcome.\n\n**HbA1c at 6.8% = Pre-diabetic Range**\nYou have crossed from Diabetic to Pre-diabetic in 6 months. This meets the clinical definition of **Type 2 Diabetes Remission** (ADA 2021 criteria: HbA1c <6.5% off medication OR <7.0% on low-dose Metformin for ≥3 months).\n\n**Medication Reduction — Approved:**\n- Metformin XR: Reduce to 500mg once daily (from twice)\n- Amlodipine: Reduce to 2.5mg — if BP remains <130/80 for 4 weeks, consider stopping\n- Atorvastatin: Continue — LDL target maintained\n\n**Next Milestone:**\n- 3 more kg weight loss → HbA1c likely reaches 6.5% → Full remission without medication possible\n\n**Long-term Plan:**\n- HbA1c every 6 months\n- Annual comprehensive metabolic panel\n- Continue walking 40 minutes daily — this is now your medicine\n\nPriya, what you have achieved in 6 months takes most patients 2 years. This is what full commitment to your health looks like. Extraordinary work."
+          }
+        ]
+      }
+    ],
+    "mood_logs": [
+      {"score": 3, "note": "Overwhelmed by diagnosis, scared", "timestamp": "05/01/2025 - 11:30"},
+      {"score": 4, "note": "Anxious about blood reports", "timestamp": "12/01/2025 - 10:30"},
+      {"score": 4, "note": "Stressed, sleep disturbed", "timestamp": "26/01/2025 - 12:00"},
+      {"score": 5, "note": "Seeing progress in glucose levels", "timestamp": "07/02/2025 - 09:00"},
+      {"score": 6, "note": "HbA1c improved, feeling hopeful", "timestamp": "07/03/2025 - 10:30"},
+      {"score": 8, "note": "All targets achieved, feel in control", "timestamp": "10/04/2025 - 11:30"}
+    ]
+  },
+  {
+    "id": "pat-0003",
+    "name": "Arjun Mehta",
+    "age": "20",
+    "gender": "Male",
+    "sessions": [
+      {
+        "id": "ses-0003-1",
+        "name": "First Visit — Mood Assessment",
+        "created_at": "08/01/2025 - 14:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "I feel empty all the time. I stopped going to college 3 weeks ago. I don't enjoy anything I used to. Even gaming which I loved. I sleep 12 hours but still feel exhausted."
+          },
+          {
+            "type": "bot",
+            "text": "**Initial Psychiatric Assessment**\n\nArjun, I want to thank you for taking this step. Coming in takes courage, especially when everything feels heavy.\n\nWhat you are describing is a classic presentation of Major Depressive Episode, not laziness, not weakness — a medical condition with well-understood neurobiology and highly effective treatments.\n\n**Symptom Checklist (DSM-5 Criteria):**\n- Depressed mood / emotional emptiness ✓\n- Anhedonia (loss of pleasure in previously enjoyed activities) ✓\n- Hypersomnia (sleeping excessively but non-restorative) ✓\n- Social withdrawal ✓\n- Functional impairment (unable to attend college) ✓\n\n**Duration:** 3+ weeks. **Severity:** Moderate-to-Severe (5+ DSM-5 criteria met)\n\n**Provisional Diagnosis:** Major Depressive Disorder (MDD), Moderate Severity\n\n**Critical Question — I need to ask directly:**\nAre you having any thoughts of harming yourself or not wanting to be alive?\n\n**Immediate Plan:**\n- PHQ-9 depression questionnaire (I will administer now)\n- Blood tests: Thyroid function (TSH), Vitamin D, Vitamin B12, CBC — these commonly cause or worsen depression\n- Daily routine establishment — even minimal structure reduces depression severity\n\n**One task before next session:** Wake up at the same time every day, regardless of how you feel. Even just this single intervention has measurable antidepressant effect."
+          },
+          {
+            "type": "user",
+            "text": "I am not thinking of harming myself. But sometimes I think everyone would be better off without me. PHQ-9 score my doctor gave was 18."
+          },
+          {
+            "type": "bot",
+            "text": "**Assessment Updated — Passive Suicidal Ideation**\n\nThank you for trusting me with that. \"Everyone would be better off without me\" is what we call passive suicidal ideation — it is a serious symptom that I need to take seriously, and I want you to know that thought is a symptom of your illness, not a fact.\n\n**PHQ-9 Score: 18 — Moderately Severe Depression**\n- Score 0–4: Minimal | 5–9: Mild | 10–14: Moderate | 15–19: Moderately Severe | 20–27: Severe\n- Your score indicates active clinical depression requiring immediate treatment\n\n**Treatment Plan — Beginning Immediately:**\n\n**Medication (Recommended):**\n- Escitalopram 5mg once daily in the morning — starting dose\n- SSRI: Safe, non-addictive, takes 2–4 weeks to reach full effect\n- Side effects in first 1–2 weeks: mild nausea, slight restlessness — these pass\n- Increase to 10mg after 2 weeks if tolerated\n\n**Psychotherapy:**\n- I am referring you to a clinical psychologist for weekly CBT (Cognitive Behavioural Therapy) — gold standard for MDD\n- CBT has equivalent long-term outcomes to medication and teaches lasting skills\n\n**Safety Plan:**\n- Please share your feelings with one trusted person — parent, sibling, friend\n- iCall helpline: 9152987821 — available Mon–Sat, 8 AM to 10 PM\n- If thoughts escalate or become active, go to the nearest emergency department immediately\n\n**I will see you in 1 week.** This is a treatable condition. Many people recover fully. You will not feel like this forever."
+          }
+        ]
+      },
+      {
+        "id": "ses-0003-2",
+        "name": "Week 2 — Medication & Routine",
+        "created_at": "15/01/2025 - 14:30",
+        "messages": [
+          {
+            "type": "user",
+            "text": "I started the medication. Feeling a bit nauseous for first few days but that passed. Still feel low but maybe slightly less. I went to college twice this week."
+          },
+          {
+            "type": "bot",
+            "text": "**Week 2 Review — Early Positive Signs**\n\nGoing to college twice this week when you had stopped entirely 3 weeks ago is a meaningful clinical step forward. The medication is too early to show full effect (SSRIs require 2–4 weeks), so this improvement is from your own effort.\n\n**Medication Response:**\n- Nausea resolving: Expected — this is the serotonin system adjusting\n- Slight mood improvement: Early signal that the medication is being absorbed and tolerated\n- Increase to Escitalopram 10mg starting today\n\n**Behavioural Activation Protocol (CBT Core Technique):**\nDepression creates a vicious cycle: low mood → no activity → no pleasure → lower mood. We break this with scheduled activity.\n\n**This Week's Tasks:**\n1. **Morning anchor:** Wake at 8 AM, shower within 30 minutes — non-negotiable\n2. **One small goal per day:** Example: Make my bed, reply to one friend's message, walk to the campus canteen\n3. **Scheduled pleasant activity (even if you don't want to):** 20 minutes of gaming daily — even if joyless at first. Depressed brains recover pleasure when re-exposed to previously enjoyable activities\n4. **Sunlight:** 15 minutes outdoors before noon — increases serotonin synthesis naturally\n\n**Important:** You will not feel like doing these things. Do them anyway. Action precedes motivation in depression — not the other way around.\n\n**PHQ-9 target for next session: below 15.**"
+          }
+        ]
+      },
+      {
+        "id": "ses-0003-3",
+        "name": "Week 4 — CBT & Cognitive Patterns",
+        "created_at": "29/01/2025 - 15:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "PHQ-9 is now 13. I am going to college regularly now. The feeling of emptiness has reduced. But I have very negative thoughts about myself and my future constantly."
+          },
+          {
+            "type": "bot",
+            "text": "**Month 1 Review — Significant Progress**\n\nPHQ-9 dropping from 18 to 13 in 3 weeks confirms the medication is taking effect and your behavioural activation is working.\n\n**PHQ-9 Score: 13 — Moderate Depression** (down from 18 — Moderately Severe)\n\n**Now Addressing: Negative Automatic Thoughts (NATs)**\nThe persistent negative self-talk you describe is a core cognitive feature of MDD. These thoughts feel like facts. They are not. They are symptoms.\n\n**Common NATs in Depression:**\n- \"I am worthless / a failure\"\n- \"Nothing will ever get better\"\n- \"I ruin everything I touch\"\n- \"My future is hopeless\"\n\n**CBT Cognitive Restructuring — Practice This Daily:**\n\n**Step 1 — Catch the thought:** \"I am a failure because I missed classes\"\n**Step 2 — Challenge the evidence:**\n- What is the actual evidence FOR this thought?\n- What is the evidence AGAINST?\n- Would I say this to a friend in the same situation?\n**Step 3 — Reframe:**\n- \"I have been unwell. I am recovering. Missing classes during a depressive episode is not evidence of failure — attending 2 days while depressed is evidence of strength.\"\n\n**Homework:**\n- Keep a Thought Record — write down 1 negative thought per day and challenge it using the 3-step method\n- Your psychologist will drill this in CBT sessions as well\n\n**Medication:** Continue Escitalopram 10mg. Full therapeutic effect will be complete by week 6.\n\n**Prognosis at this stage:** Very good. You are in the recovery curve."
+          },
+          {
+            "type": "user",
+            "text": "My parents don't understand what I am going through. They keep saying just be positive and stop being lazy. It is very frustrating."
+          },
+          {
+            "type": "bot",
+            "text": "**Family Dynamics in Depression — Addressing This Directly**\n\nThis is one of the most common and painful experiences in depression — and one of the most damaging if not addressed. Family misunderstanding actively worsens depression and increases relapse risk.\n\n**Why Parents Say This:**\nThey are not malicious — they are uninformed. \"Just think positive\" and \"stop being lazy\" reflect a cultural misunderstanding of depression as a character flaw rather than a neurobiological illness.\n\n**Clinical Impact:**\nInvalidation by caregivers increases cortisol, reduces treatment adherence, and is associated with 2x higher relapse rates in MDD.\n\n**Action Plan:**\n\n**Option 1 — Psychoeducation Session (Recommended):**\n- Bring one or both parents to a session with me (or your psychologist)\n- I will explain the biology of depression, the treatment plan, and what support actually helps\n- Seeing the clinical framing changes family behaviour significantly\n\n**Option 2 — Written Resource:**\n- I can provide a letter explaining your diagnosis to give them\n- The WHO and NIMHANS both have parent-focused depression guides\n\n**What Helpful Support Looks Like (Tell Them):**\n- \"You don't have to fix it, just don't dismiss it\"\n- \"Saying I'm here with you helps more than any advice\"\n- Joining you for a walk or meal — normalising activities\n\n**Short-term coping:**\n- Set an emotional boundary: \"I cannot discuss my mental health with you right now, but I am getting professional help\"\n- Find one person in your life who does understand — friend, cousin, counsellor — and lean on that relationship\n\nYou deserve support that actually helps. We will work on building that around you."
+          }
+        ]
+      },
+      {
+        "id": "ses-0003-4",
+        "name": "Month 2 — Academic Reintegration",
+        "created_at": "19/02/2025 - 14:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "PHQ-9 is 9 now. Attending college full time. Parents came with me to a session with the psychologist and it helped a lot. Exams are coming in a month and I am feeling pressure again."
+          },
+          {
+            "type": "bot",
+            "text": "**Month 2 Review — Excellent Recovery Trajectory**\n\n**PHQ-9: 9 — Mild Depression** (down from 18 at intake — a 50% reduction in 6 weeks)\n\nBringing your parents to the psychologist session was a bold and wise move. Family psychoeducation is one of the most powerful recovery accelerators.\n\n**Addressing Exam Pressure:**\nAcademic pressure is a high-risk trigger for depressive relapse, especially in the recovery phase. We need a concrete plan.\n\n**Academic Recovery Strategy:**\n\n**Workload Assessment:**\n- Meet with your academic advisor or professor — explain you have been unwell (you do not need to specify details)\n- Request grace period, assignment extensions, or supplementary exams where available\n- Most universities have mental health accommodation policies\n\n**Study Structure for a Recovering Depressed Brain:**\n- Use the Pomodoro method: 25 minutes focused study, 5-minute break\n- Do NOT study for more than 4 hours per day — cognitive fatigue mimics and worsens depression\n- Prioritise sleep over late-night study: memory consolidation happens during sleep\n\n**Exam Anxiety Management:**\n- Box breathing (4-4-4-4) before entering exam hall\n- Focus on preparation quality, not outcome prediction\n- A below-average exam performance during recovery is not failure — it is expected and temporary\n\n**Red Flag to Watch For:**\nIf PHQ-9 rises above 12 during exam period, contact me immediately. We may need a temporary dose adjustment.\n\n**You are doing remarkably well, Arjun.** At this pace, you will reach remission within 4–6 weeks."
+          }
+        ]
+      },
+      {
+        "id": "ses-0003-5",
+        "name": "Month 3 — Remission Assessment",
+        "created_at": "12/03/2025 - 14:30",
+        "messages": [
+          {
+            "type": "user",
+            "text": "PHQ-9 is 5 now. I passed my exams. I am enjoying things again, gaming, going out with friends. I feel like myself again."
+          },
+          {
+            "type": "bot",
+            "text": "**Month 3 — Remission Confirmed**\n\n**PHQ-9: 5 — Minimal Depression** (down from 18 at intake)\n\nThis meets the clinical criteria for **Full Remission** from Major Depressive Disorder.\n\n**Recovery Summary:**\n\n| Week | PHQ-9 | Severity | Status |\n|---|---|---|---|\n| Week 0 | 18 | Moderately Severe | Active Episode |\n| Week 2 | 15 | Moderate | Responding |\n| Week 4 | 13 | Moderate | Improving |\n| Week 6 | 9 | Mild | Significant Progress |\n| Week 10 | 5 | Minimal | **Remission** |\n\n**What Drove Your Recovery:**\n1. Early treatment initiation — you came in relatively early in the episode\n2. Medication adherence — SSRIs require consistent daily dosing\n3. CBT engagement — cognitive restructuring changed your thought patterns\n4. Behavioural activation — action despite low motivation rebuilt motivation\n5. Family support (after psychoeducation)\n6. Your own courage and consistency\n\n**Medication Going Forward:**\nClinical guidelines recommend continuing Escitalopram for **6–12 months after remission** to prevent relapse.\n- Continue 10mg for 6 months minimum\n- Do NOT stop abruptly — discuss any changes with me first\n- Tapering planned at month 6 if PHQ-9 remains below 5\n\n**Relapse Prevention:**\n- Continue weekly CBT for 4 more weeks (maintenance phase)\n- Sleep 7–8 hours — sleep disruption is the #1 relapse trigger\n- Exercise remains a powerful ongoing antidepressant\n- If you notice early warning signs (persistent low mood 5+ days), contact me immediately\n\n**Arjun, you fought this illness and won.** That takes more strength than most people will ever know. Protect what you have built."
+          }
+        ]
+      }
+    ],
+    "mood_logs": [
+      {"score": 2, "note": "Empty, can't feel anything", "timestamp": "08/01/2025 - 14:30"},
+      {"score": 3, "note": "First week of medication, slight nausea", "timestamp": "15/01/2025 - 09:00"},
+      {"score": 4, "note": "Went to college today — small win", "timestamp": "22/01/2025 - 16:00"},
+      {"score": 5, "note": "Noticing some emotions returning", "timestamp": "29/01/2025 - 10:00"},
+      {"score": 6, "note": "Parents more understanding now", "timestamp": "19/02/2025 - 18:00"},
+      {"score": 8, "note": "Passed exams, feeling like myself", "timestamp": "12/03/2025 - 20:00"}
+    ]
+  },
+  {
+    "id": "pat-0004",
+    "name": "Sunita Verma",
+    "age": "52",
+    "gender": "Female",
+    "sessions": [
+      {
+        "id": "ses-0004-1",
+        "name": "Initial Consultation — Fatigue & Weight",
+        "created_at": "10/01/2025 - 12:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "I am 52 years old. For the past 6 months I have been gaining weight, feeling extremely tired, my hair is falling, I feel cold all the time, and my memory has become very poor. I also feel sad and low for no reason."
+          },
+          {
+            "type": "bot",
+            "text": "**Initial Assessment — Constellation of Symptoms**\n\nSunita, the cluster of symptoms you have described is highly specific. Before I say anything further, I want you to know: this is not in your head, and it is not simply ageing.\n\n**Symptom Pattern Analysis:**\n- Weight gain despite no dietary change ✓\n- Chronic fatigue unrelieved by rest ✓\n- Hair loss (telogen effluvium pattern) ✓\n- Cold intolerance ✓\n- Cognitive impairment / brain fog ✓\n- Low mood / mild depression ✓\n- Age 52 / Female ✓\n\n**High Clinical Suspicion: Hypothyroidism**\nThis symptom triad is textbook Hypothyroidism — underactive thyroid gland. It is extraordinarily common in women over 40 (affects 1 in 10) and is routinely missed for years.\n\n**Differential also includes:**\n- Perimenopause / Menopause (can co-exist with thyroid dysfunction)\n- Anaemia (iron deficiency or B12)\n- Vitamin D deficiency (extremely common, causes fatigue and low mood)\n\n**Investigations Required:**\n1. Thyroid function: TSH, Free T4, Free T3\n2. Complete Blood Count (CBC) — anaemia check\n3. Serum Ferritin (iron stores)\n4. Vitamin B12 and Vitamin D levels\n5. HbA1c and fasting glucose (metabolic screen)\n6. FSH, LH, Estradiol (menopausal hormonal panel)\n\n**Please do not start any treatment until we have these results.** The management is completely different depending on what we find. Get reports within 5 days."
+          }
+        ]
+      },
+      {
+        "id": "ses-0004-2",
+        "name": "Lab Results — Thyroid Diagnosis",
+        "created_at": "17/01/2025 - 12:30",
+        "messages": [
+          {
+            "type": "user",
+            "text": "Reports came. TSH is 12.4, Free T4 is low at 0.6. Vitamin D is 18, B12 is 210, haemoglobin is 10.8. FSH and LH are elevated."
+          },
+          {
+            "type": "bot",
+            "text": "**Lab Results Analysis — Multiple Deficiencies Confirmed**\n\n**1. Thyroid Function:**\n- TSH: 12.4 mIU/L (Normal: 0.4–4.0) — Significantly Elevated\n- Free T4: 0.6 ng/dL (Normal: 0.8–1.8) — Low\n- **Diagnosis: Overt Hypothyroidism — Confirmed**\nThis is the primary driver of your fatigue, weight gain, cold intolerance, hair loss, and cognitive impairment.\n\n**2. Vitamin D: 18 ng/mL (Normal: 30–100 ng/mL) — Deficient**\nVitamin D deficiency causes: fatigue, bone pain, depression, muscle weakness, immune dysfunction\n\n**3. Vitamin B12: 210 pg/mL (Normal: 300–900) — Borderline Low**\nB12 deficiency causes: fatigue, poor memory, low mood, tingling in extremities\n\n**4. Haemoglobin: 10.8 g/dL (Normal: 12.0–15.5) — Mild Anaemia**\nIron-deficiency anaemia: contributing to fatigue and pallor\n\n**5. FSH/LH Elevated — Perimenopause Confirmed**\nOvarian reserve declining — hormonal transition contributing to mood and sleep symptoms\n\n**Comprehensive Treatment Plan:**\n\n**Medications:**\n- **Levothyroxine 50mcg** once daily — on empty stomach, 30 minutes before breakfast, with plain water only\n- **Vitamin D3 60,000 IU** once weekly for 8 weeks, then 1,000 IU daily maintenance\n- **Methylcobalamin (B12) 1,500mcg** daily for 3 months\n- **Ferrous Ascorbate + Folic Acid** once daily with food (for anaemia)\n\n**Important — Levothyroxine Rules:**\n- Never take with tea, coffee, milk, calcium, or iron within 4 hours\n- Same brand every time — different brands have different bioavailability\n- Recheck TSH in 6 weeks — dose will need adjustment\n\nAddressing all four deficiencies simultaneously — this is why you have felt so unwell. Within 8–12 weeks, you should notice significant improvement."
+          },
+          {
+            "type": "user",
+            "text": "I am also having hot flashes, night sweats and irregular periods. Is that related?"
+          },
+          {
+            "type": "bot",
+            "text": "**Perimenopausal Symptoms — Addressed**\n\nYes — directly related, and your elevated FSH/LH confirm this. You are in perimenopause, the transition phase typically lasting 4–8 years before menopause (12 consecutive months without a period).\n\n**Your Hot Flashes and Night Sweats Explained:**\n- Declining oestrogen disrupts the hypothalamus thermostat\n- Hot flashes are neurological vasomotor symptoms, not just discomfort\n- Night sweats are disrupting your sleep → compounding your fatigue\n- Hypothyroidism also worsens vasomotor symptoms\n\n**Management Options:**\n\n**Non-Hormonal (Start Here):**\n- Black Cohosh 20mg twice daily — reduces hot flash frequency by 26% in RCTs\n- Dress in layers, keep bedroom at 18–19°C\n- Avoid hot flash triggers: caffeine, alcohol, spicy food, hot drinks, stress\n- Mind-body: Paced respiration (slow breathing) during a flash — reduces intensity 39%\n\n**Hormonal (Discuss at 3-Month Review):**\n- Low-dose Hormone Replacement Therapy (HRT) — most effective treatment (reduces flashes by 80–90%)\n- For women without contraindications (breast cancer history, clotting disorders)\n- Modern transdermal HRT has a very favourable safety profile — not the same as the older oral preparations that caused concern\n\n**Priority Right Now:**\nTreat the thyroid first — correcting hypothyroidism alone often reduces perimenopausal symptom severity significantly. Re-evaluate vasomotor symptoms after 8 weeks of Levothyroxine.\n\n**Next review in 6 weeks with repeat TSH.**"
+          }
+        ]
+      },
+      {
+        "id": "ses-0004-3",
+        "name": "6-Week Thyroid Review",
+        "created_at": "28/02/2025 - 12:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "Feeling much better. Energy is improved. Hair fall has reduced. TSH is now 5.8, still a bit high. Vitamin D taken for 8 weeks. Hot flashes still there but less severe."
+          },
+          {
+            "type": "bot",
+            "text": "**6-Week Review — Good Response, Titration Needed**\n\n**TSH: 5.8 mIU/L** — Improved from 12.4 but still above target.\n- Hypothyroid target: TSH 1.0–2.5 mIU/L for symptomatic patients\n- Levothyroxine is working but dose needs upward titration\n\n**Medication Adjustment:**\n- **Levothyroxine: Increase to 75mcg** from 50mcg\n- Continue same timing rules: empty stomach, 30 min before breakfast\n- Recheck TSH in 6 weeks\n\n**Vitamin D: Maintenance Phase**\n- Switch from 60,000 IU weekly to **Vitamin D3 2,000 IU daily**\n- Recheck Vitamin D level at 3 months — target 50–70 ng/mL\n\n**B12 and Iron:**\n- Continue Methylcobalamin and Ferrous Ascorbate for another 6 weeks\n- Recheck CBC at 3 months for haemoglobin improvement\n\n**Hot Flash Update:**\nReduced severity with hypothyroid treatment — as expected. Continuing non-hormonal management.\n\n**Symptom Improvement Tracking:**\n\n| Symptom | Baseline | Week 6 |\n|---|---|---|\n| Fatigue | Severe | Moderate — improving |\n| Hair fall | Significant | Reducing |\n| Cold intolerance | Yes | Improving |\n| Brain fog | Severe | Moderate |\n| Hot flashes | Frequent, severe | Less frequent, milder |\n\n**Excellent progress. Next full review in 6 weeks with TSH, CBC, Vitamin D.**"
+          }
+        ]
+      },
+      {
+        "id": "ses-0004-4",
+        "name": "3-Month Comprehensive Review",
+        "created_at": "14/03/2025 - 11:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "New TSH is 1.9. Vitamin D is 52. Haemoglobin is 12.1. I feel like a completely different person. The brain fog has almost gone. Hot flashes are still twice a day."
+          },
+          {
+            "type": "bot",
+            "text": "**3-Month Review — Excellent All-Round Response**\n\n**Results Comparison:**\n\n| Parameter | Baseline | 3 Months | Target | Status |\n|---|---|---|---|---|\n| TSH | 12.4 | 1.9 | 1.0–2.5 | ACHIEVED |\n| Free T4 | 0.6 (Low) | Normal range | Normal | ACHIEVED |\n| Vitamin D | 18 (Deficient) | 52 (Optimal) | 40–70 | ACHIEVED |\n| Haemoglobin | 10.8 (Anaemic) | 12.1 (Normal) | >12.0 | ACHIEVED |\n\nAll four deficiencies corrected in 3 months. The neurological and cognitive improvement you feel — brain fog clearing, energy returning — is the T3/T4 normalizing neurotransmitter function and cellular energy production.\n\n**Medications — Stabilisation Phase:**\n- Levothyroxine 75mcg — continue, no change needed\n- Vitamin D3 2,000 IU — continue as maintenance\n- B12: Reduce to 500mcg every alternate day — maintenance dose\n- Iron supplement: Stop — Haemoglobin normalized ✓\n\n**Remaining Issue: Hot Flashes (2x/day)**\nNow that thyroid is optimised, remaining hot flashes are purely perimenopausal.\n\n**Discussing HRT:**\n- You are an excellent candidate for low-dose transdermal HRT\n- Oestrogen patch (Estradiol 25mcg) — reduces hot flashes by 85–90%\n- Combined with Micronised Progesterone (if uterus intact) for endometrial protection\n- Modern transdermal HRT: No increased clotting risk (unlike oral), minimal cardiovascular risk\n- I recommend you review this with a Gynaecologist for formal HRT initiation\n\n**Referral:** I am writing a referral to a Gynaecologist specialising in menopause management.\n\n**TSH recheck in 6 months.** Annual thyroid antibody test (anti-TPO) to monitor autoimmune component."
+          }
+        ]
+      },
+      {
+        "id": "ses-0004-5",
+        "name": "Long-term Wellness Plan",
+        "created_at": "04/04/2025 - 12:00",
+        "messages": [
+          {
+            "type": "user",
+            "text": "I saw the gynaecologist and started HRT patch 3 weeks ago. Hot flashes are almost gone. I feel the best I have felt in 2 years."
+          },
+          {
+            "type": "bot",
+            "text": "**Long-term Wellness Review — Outstanding Outcome**\n\nSunita, you have gone from four simultaneous deficiencies and debilitating symptoms to near-complete resolution in 3 months. This is what structured, comprehensive medicine looks like when followed properly.\n\n**Current Status — All Conditions Managed:**\n\n| Condition | Status |\n|---|---|\n| Hypothyroidism | Controlled — TSH 1.9 |\n| Vitamin D Deficiency | Corrected — Vit D 52 |\n| Iron Deficiency Anaemia | Resolved — Hb 12.1 |\n| Perimenopausal Vasomotor Symptoms | Controlled — HRT initiated |\n| B12 Borderline Deficiency | Corrected — maintenance dose |\n\n**Long-term Maintenance Plan:**\n\n**Monitoring Schedule:**\n- TSH every 6 months — thyroid dose may need adjustment as years progress\n- Annual bone density scan (DEXA) — hypothyroidism and menopause both affect bone density\n- Vitamin D level annually — maintain 50–70 ng/mL\n- Breast examination and mammogram annually (standard with HRT)\n- Annual lipid profile and fasting glucose — metabolic risk increases post-menopause\n\n**Lifestyle Pillars (non-negotiable for long-term health):**\n1. **Weight-bearing exercise** 3–4x/week — protects bone density (critical in post-menopause)\n2. **Calcium 1,200mg daily** through diet (dairy, sesame, ragi) — with Vitamin D for absorption\n3. **Protein at every meal** — prevents muscle loss (sarcopenia) which accelerates post-50\n4. **Mediterranean diet** — strongest evidence for cardiovascular protection in post-menopausal women\n5. **Stress management** — cortisol worsens every one of your conditions\n\n**Annual Review Required.** If you notice fatigue returning, weight changes, or mood shifts — come in immediately rather than waiting for annual check.\n\nYou advocated for yourself and followed through on every recommendation. The outcome you have achieved belongs entirely to that commitment. Well done."
+          }
+        ]
+      }
+    ],
+    "mood_logs": [
+      {"score": 3, "note": "Exhausted, brain fog, hair falling badly", "timestamp": "10/01/2025 - 12:30"},
+      {"score": 3, "note": "Waiting for reports, anxious", "timestamp": "17/01/2025 - 13:00"},
+      {"score": 5, "note": "Started medications, hopeful", "timestamp": "24/01/2025 - 09:00"},
+      {"score": 6, "note": "Energy improving, hair fall reduced", "timestamp": "28/02/2025 - 12:30"},
+      {"score": 8, "note": "Brain fog almost gone, feeling human again", "timestamp": "14/03/2025 - 11:30"},
+      {"score": 9, "note": "HRT working, hot flashes gone, feeling 40 again", "timestamp": "04/04/2025 - 12:30"}
+    ]
+  }
+]

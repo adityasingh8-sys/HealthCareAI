@@ -25,10 +25,11 @@ build/
 .vscode/
 .idea/
 
-# Chat data (runtime state)
+# Chat data (runtime state — not tracked, generated from seed_data.json on first run)
 chats.json
 chat.json
 chat_backup.json
+# seed_data.json is intentionally tracked (demo seed)
 
 # OS
 .DS_Store
