@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>MindSync AI — Healthcare Intelligence</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loading-container">
+    <div class="loading-core">
+      <div class="loading-ring"></div>
+      <div class="loading-ring ring-2"></div>
+      <div class="loading-pulse"></div>
+    </div>
+    <div id="loadingText" class="loading-text">INITIALIZING MindSync...</div>
+    <div class="loading-bar"><div class="loading-bar-fill" id="loadingBar"></div></div>
+  </div>
+</div>
+
+<!-- Top Bar -->
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">
+      <span class="brand-icon">&#9883;</span>
+    </div>
+    <span class="brand-name">MindSync<span class="brand-ai">AI</span></span>
+  </div>
+  <nav class="nav">
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How it Works</a>
+    <a href="#privacy">Privacy</a>
+    <button class="nav-cta" id="openChatNav">Open Console</button>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">AI-Powered Healthcare Intelligence</div>
+    <h1 class="hero-title">MindSync <span class="gradient-text">AI</span></h1>
+    <p class="hero-subtitle">
+      Intelligent patient management, real-time AI consultations, clinical report generation,
+      and mood tracking — all in one unified healthcare platform.
+    </p>
+    <div class="hero-actions">
+      <button class="btn-primary" id="openChatCard">Start Consultation</button>
+      <button class="btn-secondary" id="openReportBtn">Analyze Reports</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-value" id="statPatients">0</span>
+        <span class="hero-stat-label">Patients</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value" id="statSessions">0</span>
+        <span class="hero-stat-label">Sessions</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value" id="statMessages">0</span>
+        <span class="hero-stat-label">Messages</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section" id="features">
+  <div class="features-inner">
+    <h2 class="section-title">Core Capabilities</h2>
+    <div class="feature-grid">
+
+      <article class="feature-card">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3 class="feature-title">AI Consultation</h3>
+        <p class="feature-text">Real-time clinical conversations with context-aware AI. Supports symptom analysis, medication guidance, and mental health support.</p>
+        <button class="feature-btn" id="openChatFeature">Start Chat</button>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3 class="feature-title">Clinical Reports</h3>
+        <p class="feature-text">Auto-generate structured patient reports with risk assessment, progress tracking, and clinical recommendations.</p>
+        <button class="feature-btn" id="openReportFeature">Generate Report</button>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3 class="feature-title">Symptom Check</h3>
+        <p class="feature-text">Quick AI-powered symptom triage with urgency assessment, possible conditions, and specialist recommendations.</p>
+        <button class="feature-btn" id="openAssessmentBtn">Check Symptoms</button>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <h3 class="feature-title">Mood Tracking</h3>
+        <p class="feature-text">Log and visualize patient mood patterns over time. Identify trends, triggers, and emotional progress across sessions.</p>
+        <button class="feature-btn" id="openMoodBtn">Track Mood</button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Chat Overlay -->
+<div class="chat-overlay hidden" id="chatOverlay">
+  <div class="chat-overlay-header">
+    <div class="chat-overlay-brand">
+      <div class="brand-mark"><span class="brand-icon">&#9883;</span></div>
+      <span>MindSync AI</span>
+    </div>
+    <div class="chat-overlay-actions">
+      <input class="chat-search" id="chatSearch" type="text" placeholder="Search patients, sessions...">
+      <button class="overlay-close-btn" id="closeChatOverlay">&#10005;</button>
+    </div>
+  </div>
+  <div class="chat-overlay-body">
+    <aside class="overlay-sidebar">
+      <button class="sidebar-action-btn" id="addPatientBtn">+ New Patient</button>
+      <div class="patient-list" id="patientList"></div>
+    </aside>
+    <section class="overlay-chat-panel">
+      <div class="session-header" id="sessionHeader">
+        <h2>Welcome to MindSync AI</h2>
+        <p>Select a patient and session to begin consultation</p>
+      </div>
+      <div class="chat-window" id="chatWindow"></div>
+      <div class="chat-composer">
+        <button class="composer-btn" id="voiceBtn" title="Voice Input">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+        </button>
+        <button class="composer-btn" id="voiceToggle" title="Toggle Voice Output">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+        </button>
+        <input type="text" id="userInput" placeholder="Describe symptoms, ask questions, or enter notes...">
+        <button class="send-btn" id="sendBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- Report Overlay -->
+<div class="report-overlay hidden" id="reportOverlay">
+  <div class="report-overlay-header">
+    <div class="chat-overlay-brand">
+      <div class="brand-mark"><span class="brand-icon">&#9883;</span></div>
+      <span>MindSync AI — Report Analysis</span>
+    </div>
+    <button class="overlay-close-btn" id="closeReportOverlay">&#10005;</button>
+  </div>
+  <div class="report-overlay-body">
+    <aside class="report-sidebar" id="reportSidebar">
+      <h3 class="report-sidebar-title">Select Patient</h3>
+      <div class="report-patient-list" id="reportPatientList"></div>
+    </aside>
+    <section class="report-display" id="reportDisplay">
+      <div class="report-empty-state" id="reportEmptyState">
+        <div class="report-empty-icon">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h2>Clinical Report Analysis</h2>
+        <p>Select a patient from the sidebar to generate an AI-powered clinical report</p>
+      </div>
+      <div class="report-loading hidden" id="reportLoading">
+        <div class="report-spinner"></div>
+        <p class="report-loading-title">Analyzing Patient Data</p>
+        <p class="report-loading-sub">MindSync AI is processing conversation history and generating clinical insights...</p>
+      </div>
+      <div class="report-content hidden" id="reportContent">
+        <div class="report-header-card" id="reportHeaderCard"></div>
+        <div class="report-stats" id="reportStats"></div>
+        <div class="report-sessions-grid" id="reportSessionsGrid"></div>
+        <div class="report-ai-analysis" id="reportAiAnalysis"></div>
+        <div class="report-footer" id="reportFooter"></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- Assessment Modal -->
+<div class="modal-overlay hidden" id="assessmentModal">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h2>Quick Symptom Assessment</h2>
+      <button class="overlay-close-btn" id="closeAssessment">&#10005;</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc">Describe your symptoms and MindSync AI will provide a preliminary assessment with urgency level and recommended specialist.</p>
+      <textarea id="symptomInput" class="modal-textarea" rows="5" placeholder="Example: I've been having persistent headaches for 2 weeks, worse in the morning, with occasional blurred vision and neck stiffness..."></textarea>
+      <button class="btn-primary modal-submit" id="submitAssessment">Analyze Symptoms</button>
+      <div class="assessment-result hidden" id="assessmentResult"></div>
+      <div class="assessment-loading hidden" id="assessmentLoading">
+        <div class="report-spinner small"></div>
+        <p>Analyzing symptoms...</p>
+      </div>
+      <p class="modal-disclaimer">This is not a medical diagnosis. Always consult a healthcare professional.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Mood Modal -->
+<div class="modal-overlay hidden" id="moodModal">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h2>Mood Tracker</h2>
+      <button class="overlay-close-btn" id="closeMood">&#10005;</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc">Select a patient and log their current mood level (1-10). Track emotional patterns over time.</p>
+      <select id="moodPatientSelect" class="modal-select">
+        <option value="">Select Patient</option>
+      </select>
+      <div class="mood-slider-wrap">
+        <label>Mood Score: <span id="moodScoreDisplay">5</span>/10</label>
+        <input type="range" id="moodSlider" min="1" max="10" value="5" class="mood-slider">
+        <div class="mood-labels">
+          <span>Very Low</span>
+          <span>Neutral</span>
+          <span>Excellent</span>
+        </div>
+      </div>
+      <input type="text" id="moodNote" class="modal-input" placeholder="Optional note (e.g., slept well, stressful day)">
+      <button class="btn-primary modal-submit" id="submitMood">Log Mood</button>
+      <div class="mood-history" id="moodHistory"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>

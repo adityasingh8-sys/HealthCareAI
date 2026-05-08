@@ -1,0 +1,891 @@
+
+\documentclass[12pt,a4paper]{report}
+
+% ===================== PACKAGES =====================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{tocloft}
+
+% ===================== COLORS =====================
+\definecolor{srmblue}{HTML}{002B5C}
+\definecolor{srmgold}{HTML}{C8962E}
+\definecolor{codeblue}{HTML}{1A478A}
+\definecolor{codebg}{HTML}{F5F7FB}
+\definecolor{darktext}{HTML}{1A1A2E}
+
+% ===================== SETTINGS =====================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=srmblue,
+    urlcolor=codeblue,
+    citecolor=srmblue
+}
+
+\onehalfspacing
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{srmblue}{MindSync AI — Project Report}}
+\fancyhead[R]{\small\textcolor{srmblue}{SRM Institute of Science and Technology}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{srmblue}}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{srmblue}}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{codeblue}}
+  {\thesubsection}{1em}{}
+
+% Code listing style
+\lstdefinestyle{codestyle}{
+    backgroundcolor=\color{codebg},
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    rulecolor=\color{gray!30},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{codeblue}\bfseries,
+    commentstyle=\color{gray},
+    stringstyle=\color{srmgold},
+    showstringspaces=false,
+    tabsize=4,
+    captionpos=b
+}
+\lstset{style=codestyle}
+
+% ===================== DOCUMENT =====================
+\begin{document}
+
+% ==================== TITLE PAGE ====================
+\begin{titlepage}
+    \begin{center}
+        \vspace*{0.5cm}
+
+        {\Large\textbf{\textcolor{srmblue}{SRM INSTITUTE OF SCIENCE AND TECHNOLOGY}}}\\[0.3cm]
+        {\large (Deemed to be University u/s 3 of UGC Act, 1956)}\\[0.2cm]
+        {\large Kattankulathur -- 603203, Chengalpattu District, Tamil Nadu}\\[0.8cm]
+
+        {\large\textbf{Department of Computer Science and Engineering}}\\[1.5cm]
+
+        \rule{\textwidth}{1pt}\\[0.5cm]
+        {\LARGE\textbf{\textcolor{srmblue}{PROJECT REPORT}}}\\[0.3cm]
+        {\large Project Review -- II}\\[0.5cm]
+        \rule{\textwidth}{1pt}\\[1.5cm]
+
+        {\Huge\textbf{\textcolor{srmblue}{MindSync AI}}}\\[0.5cm]
+        {\Large\textit{AI-Powered Healthcare Intelligence Platform}}\\[2cm]
+
+        \begin{minipage}[t]{0.45\textwidth}
+            \begin{flushleft}
+                \textbf{Submitted by:}\\[0.3cm]
+                Aditya Singh\\
+                Reg. No.: RAXXXXXXXXX\\
+                B.Tech CSE
+            \end{flushleft}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\textwidth}
+            \begin{flushright}
+                \textbf{Under the Guidance of:}\\[0.3cm]
+                Dr. [Faculty Name]\\
+                Dept. of CSE\\
+                SRMIST
+            \end{flushright}
+        \end{minipage}
+
+        \vfill
+        {\large\textbf{Academic Year 2025--2026}}
+
+    \end{center}
+\end{titlepage}
+
+% ==================== CERTIFICATE ====================
+\newpage
+\thispagestyle{empty}
+\begin{center}
+    {\Large\textbf{\textcolor{srmblue}{CERTIFICATE}}}\\[1.5cm]
+\end{center}
+
+This is to certify that the project titled \textbf{``MindSync AI -- AI-Powered Healthcare Intelligence Platform''} submitted by \textbf{Aditya Singh} (Reg. No.: RAXXXXXXXXX) in partial fulfillment of the requirements for the award of the degree of \textbf{Bachelor of Technology in Computer Science and Engineering} at \textbf{SRM Institute of Science and Technology, Kattankulathur} is a bonafide record of work carried out under my supervision during the academic year \textbf{2025--2026}.
+
+\vspace{3cm}
+
+\begin{minipage}[t]{0.45\textwidth}
+    \begin{flushleft}
+        \rule{5cm}{0.5pt}\\
+        \textbf{Dr. [Faculty Name]}\\
+        Project Guide\\
+        Dept. of CSE, SRMIST
+    \end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \begin{flushright}
+        \rule{5cm}{0.5pt}\\
+        \textbf{Head of Department}\\
+        Dept. of CSE\\
+        SRMIST
+    \end{flushright}
+\end{minipage}
+
+\vspace{3cm}
+\begin{center}
+    Date: \rule{3cm}{0.5pt} \hspace{2cm} Place: Kattankulathur
+\end{center}
+
+% ==================== ACKNOWLEDGEMENT ====================
+\newpage
+\thispagestyle{empty}
+\begin{center}
+    {\Large\textbf{\textcolor{srmblue}{ACKNOWLEDGEMENT}}}\\[1.5cm]
+\end{center}
+
+I would like to express my sincere gratitude to my project guide \textbf{Dr. [Faculty Name]}, Department of Computer Science and Engineering, SRM Institute of Science and Technology, for the invaluable guidance, constant encouragement, and support throughout the development of this project.
+
+I am thankful to the \textbf{Head of the Department} and all the faculty members of the Department of Computer Science and Engineering for providing the necessary resources and a conducive environment for this project work.
+
+I also extend my appreciation to the open-source community behind \textbf{Ollama}, \textbf{Flask}, and the \textbf{Qwen} language model, whose tools made this project possible.
+
+Finally, I am grateful to my family and friends for their constant support and motivation.
+
+\vspace{2cm}
+\begin{flushright}
+    \textbf{Aditya Singh}\\
+    Reg. No.: RAXXXXXXXXX
+\end{flushright}
+
+% ==================== ABSTRACT ====================
+\newpage
+\thispagestyle{empty}
+\begin{center}
+    {\Large\textbf{\textcolor{srmblue}{ABSTRACT}}}\\[1.5cm]
+\end{center}
+
+Mental health disorders affect a significant portion of the global population, yet access to qualified mental health professionals remains limited. Existing AI-based mental health tools often rely on cloud-based processing, raising serious concerns about patient data privacy and confidentiality.
+
+\textbf{MindSync AI} is an AI-powered healthcare intelligence platform designed to provide secure, offline clinical consultations using locally-hosted large language models. Built with Flask (Python) as the backend and vanilla HTML/CSS/JavaScript for the frontend, the platform runs the \textbf{Qwen 2.5 (3B parameter)} model through \textbf{Ollama}, ensuring that all patient data remains on the user's device with zero cloud dependency.
+
+The platform offers five core modules: (1)~\textbf{Patient Management} with full CRUD operations and multi-session support, (2)~\textbf{AI-Powered Clinical Consultation} with context-aware conversations and crisis detection, (3)~\textbf{Automated Clinical Report Generation} with AI-driven risk assessment, (4)~\textbf{Symptom Assessment and Triage} with urgency classification, and (5)~\textbf{Mood Tracking} with historical visualization.
+
+Key safety features include a crisis keyword detection filter that provides immediate helpline contacts, message length validation, input sanitization against XSS attacks, and clear disclaimers encouraging professional medical consultation. The system uses structured clinical prompts engineered for evidence-based, empathetic AI responses.
+
+The application has been tested across functional, edge-case, UI/UX, and performance dimensions. Results demonstrate responsive AI interactions, accurate report generation, and a modern dark-themed UI accessible from any device on the local network.
+
+\vspace{0.5cm}
+\noindent\textbf{Keywords:} Artificial Intelligence, Mental Health, Healthcare Chatbot, Natural Language Processing, Ollama, Qwen, Flask, Offline AI, Clinical Report Generation, Mood Tracking
+
+% ==================== TABLE OF CONTENTS ====================
+\tableofcontents
+
+% ==================== CHAPTER 1: INTRODUCTION ====================
+\chapter{Introduction}
+
+\section{Overview}
+
+Mental health is one of the most pressing healthcare challenges of the 21st century. According to the World Health Organization (WHO), approximately 1 in every 8 people globally lives with a mental health condition, and the gap between those who need treatment and those who receive it remains alarmingly wide. In low- and middle-income countries, more than 75\% of people with mental health conditions receive no treatment at all.
+
+The advent of Artificial Intelligence (AI) and Natural Language Processing (NLP) has opened new avenues for mental health support. AI-powered chatbots and virtual assistants can provide preliminary guidance, emotional support, and structured clinical tools to bridge the gap between patients and healthcare professionals. However, most existing solutions are cloud-based, requiring patient data to be transmitted to remote servers---a significant concern for sensitive medical information.
+
+\textbf{MindSync AI} addresses these limitations by providing a fully offline, locally-hosted AI healthcare platform. By leveraging the Ollama runtime with the Qwen 2.5 (3B) language model, all AI inference occurs on the user's machine, ensuring complete data privacy while maintaining clinical accuracy.
+
+\section{Problem Statement}
+
+The following challenges motivate the development of MindSync AI:
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Limited Access to Mental Health Professionals:} The global shortage of mental health practitioners means many patients cannot receive timely care.
+    \item \textbf{Privacy Concerns:} Existing AI mental health tools (e.g., Woebot, Wysa) transmit sensitive patient conversations to cloud servers, violating patient privacy expectations.
+    \item \textbf{Administrative Burden:} Therapists and clinicians spend significant time on documentation---writing session notes, progress reports, and tracking patient mood patterns.
+    \item \textbf{Lack of Unified Platforms:} No single platform combines AI consultation, clinical report generation, symptom triage, and mood tracking in an offline package.
+    \item \textbf{Stigma Barrier:} Many individuals hesitate to seek help due to social stigma; a private AI assistant can serve as an initial bridge to professional care.
+\end{enumerate}
+
+\section{Objectives}
+
+The primary objectives of this project are:
+
+\begin{enumerate}[label=\arabic*.]
+    \item Develop an AI-powered healthcare assistant capable of conducting empathetic, clinically informed conversations.
+    \item Implement a structured patient and session management system with full CRUD operations.
+    \item Enable automated clinical report generation using AI analysis of patient conversation history.
+    \item Provide a quick symptom assessment feature with urgency level classification and specialist recommendations.
+    \item Build a mood tracking system to log and visualize patient emotional patterns over time.
+    \item Ensure 100\% offline operation with all AI inference running locally---no cloud dependency.
+    \item Design a modern, responsive web interface accessible from any device on the local network.
+\end{enumerate}
+
+\section{Scope}
+
+MindSync AI is designed for:
+
+\begin{itemize}
+    \item Mental health professionals who need AI-assisted documentation for patient interactions.
+    \item Clinics and hospitals seeking offline-capable AI consultation tools that preserve data privacy.
+    \item Researchers studying mood patterns and therapy outcomes through data-driven insights.
+    \item Patients seeking initial guidance on symptoms before consulting a specialist.
+\end{itemize}
+
+% ==================== CHAPTER 2: LITERATURE SURVEY ====================
+\chapter{Literature Survey}
+
+A comprehensive review of existing literature and tools was conducted to identify the current state of AI-assisted mental health care and the gaps that MindSync AI aims to address.
+
+\section{Woebot (Fitzpatrick et al., 2017)}
+
+Woebot is a conversational agent designed to deliver Cognitive Behavioral Therapy (CBT) techniques to young adults. In a randomized controlled trial, participants who used Woebot for two weeks showed significant reduction in depression symptoms compared to the control group.
+
+\textbf{Limitations:} Woebot uses rule-based conversational patterns rather than generative AI, limiting its ability to handle diverse or unexpected inputs. It also lacks clinical reporting and patient management features.
+
+\section{Wysa (Inkster et al., 2018)}
+
+Wysa is an AI-powered mental health chatbot that combines NLP with therapeutic techniques including CBT, DBT, and mindfulness. Studies showed significant improvement in PHQ-9 depression scores among users.
+
+\textbf{Limitations:} Wysa is cloud-based, meaning all patient conversations are transmitted to external servers. It does not offer clinical report generation or symptom triage functionality.
+
+\section{Large Language Models in Healthcare (Singhal et al., 2023)}
+
+Google's Med-PaLM demonstrated that large language models can achieve expert-level accuracy on medical question-answering benchmarks (USMLE). This validated the potential of LLMs for clinical applications.
+
+\textbf{Limitations:} Models like Med-PaLM require significant cloud computing resources and are not accessible for local deployment. They are designed for medical Q\&A rather than ongoing therapy or counseling.
+
+\section{Ollama and Local LLMs (2024)}
+
+The Ollama project enables running large language models (Qwen, Llama, Mistral) locally on consumer hardware without requiring cloud infrastructure. This breakthrough makes it feasible to build privacy-first AI applications.
+
+\textbf{Gap:} While Ollama provides the runtime, no healthcare-specific application framework exists that leverages it for clinical consultation, report generation, and patient management.
+
+\section{Identified Research Gap}
+
+\begin{table}[h!]
+\centering
+\caption{Comparison of Existing Systems}
+\begin{tabularx}{\textwidth}{|l|c|c|c|c|c|}
+\hline
+\textbf{Feature} & \textbf{Woebot} & \textbf{Wysa} & \textbf{Med-PaLM} & \textbf{MindSync AI} \\
+\hline
+AI Conversations & \checkmark & \checkmark & \checkmark & \checkmark \\
+\hline
+Offline / Local AI & $\times$ & $\times$ & $\times$ & \checkmark \\
+\hline
+Clinical Reports & $\times$ & $\times$ & $\times$ & \checkmark \\
+\hline
+Symptom Triage & $\times$ & Partial & \checkmark & \checkmark \\
+\hline
+Mood Tracking & $\times$ & \checkmark & $\times$ & \checkmark \\
+\hline
+Patient Management & $\times$ & $\times$ & $\times$ & \checkmark \\
+\hline
+Data Privacy & Cloud & Cloud & Cloud & Local \\
+\hline
+\end{tabularx}
+\end{table}
+
+% ==================== CHAPTER 3: SYSTEM DESIGN ====================
+\chapter{System Design}
+
+\section{Proposed System}
+
+MindSync AI is a web-based healthcare intelligence platform built on a three-tier architecture:
+
+\begin{enumerate}
+    \item \textbf{Presentation Layer:} HTML5/CSS3/JavaScript frontend served by Flask's template engine.
+    \item \textbf{Application Layer:} Flask (Python) REST API handling all business logic and routing.
+    \item \textbf{AI + Data Layer:} Ollama runtime with Qwen 2.5:3B model and JSON file-based storage.
+\end{enumerate}
+
+\section{System Architecture}
+
+The system follows a layered architecture pattern:
+
+\begin{verbatim}
++--------------------------------------------------+
+|           PRESENTATION LAYER                      |
+|    HTML5 / CSS3 / JavaScript (Vanilla ES6+)       |
+|    index.html  |  styles.css  |  app.js           |
++--------------------------------------------------+
+                    |  HTTP / REST API  |
++--------------------------------------------------+
+|           APPLICATION LAYER                       |
+|    Flask (Python 3.12) — 14 API Routes            |
+|    Patient CRUD | Chat | Reports | Assessment     |
++--------------------------------------------------+
+                    |  Ollama SDK  |
++--------------------------------------------------+
+|           AI ENGINE                               |
+|    Ollama + Qwen 2.5:3B (Local LLM)              |
+|    System Prompts | Safety Filters | Context      |
++--------------------------------------------------+
+                    |  File I/O  |
++--------------------------------------------------+
+|           DATA LAYER                              |
+|    JSON File Storage (chat.json)                  |
+|    Patients | Sessions | Messages | Mood Logs     |
++--------------------------------------------------+
+\end{verbatim}
+
+\section{Data Flow Diagram}
+
+\subsection{Level 0 — Context Diagram}
+
+The user interacts with the MindSync AI web interface. The system processes requests through Flask, communicates with the Ollama AI engine for intelligent responses, and persists data in the JSON file store.
+
+\subsection{Level 1 — Functional Decomposition}
+
+\begin{enumerate}
+    \item \textbf{User Interface Module} $\rightarrow$ Sends HTTP requests to Flask API
+    \item \textbf{Patient Management Module} $\rightarrow$ CRUD operations on patient/session records
+    \item \textbf{Chat Engine Module} $\rightarrow$ Processes messages through AI with context windowing
+    \item \textbf{Report Generator Module} $\rightarrow$ Aggregates patient data and invokes AI analysis
+    \item \textbf{Assessment Module} $\rightarrow$ Processes symptom descriptions through triage prompt
+    \item \textbf{Mood Tracker Module} $\rightarrow$ Logs and retrieves mood scores per patient
+\end{enumerate}
+
+\section{Data Model}
+
+The application uses a JSON-based data structure:
+
+\begin{lstlisting}[language=Python, caption=Patient Data Structure]
+{
+    "id": "UUID string",
+    "name": "Patient Name",
+    "age": "Age (optional)",
+    "gender": "Gender (optional)",
+    "sessions": [
+        {
+            "id": "UUID string",
+            "name": "Session Name",
+            "created_at": "DD/MM/YYYY - HH:MM",
+            "messages": [
+                {"type": "user", "text": "..."},
+                {"type": "bot",  "text": "..."}
+            ]
+        }
+    ],
+    "mood_logs": [
+        {
+            "score": 1-10,
+            "note": "Optional text",
+            "timestamp": "DD/MM/YYYY - HH:MM"
+        }
+    ]
+}
+\end{lstlisting}
+
+% ==================== CHAPTER 4: MODULES ====================
+\chapter{Module Description}
+
+\section{Module 1: Patient Management}
+
+This module handles the complete lifecycle of patient records within the system.
+
+\textbf{Features:}
+\begin{itemize}
+    \item Create new patients with name, age, and gender fields
+    \item Rename and delete existing patients
+    \item Each patient is assigned a unique UUID for identification
+    \item Search and filter across all patients, sessions, and message content
+\end{itemize}
+
+\textbf{API Endpoints:}
+\begin{itemize}
+    \item \texttt{GET /get\_patients} --- Retrieve all patient records
+    \item \texttt{POST /add\_patient} --- Create a new patient
+    \item \texttt{POST /rename\_patient} --- Rename an existing patient
+    \item \texttt{POST /delete\_patient} --- Delete a patient and all associated data
+    \item \texttt{POST /export\_patient} --- Export complete patient data as JSON
+\end{itemize}
+
+\section{Module 2: Session Management}
+
+Each patient can have multiple chat sessions, allowing clinicians to organize conversations by visit, topic, or date.
+
+\textbf{Features:}
+\begin{itemize}
+    \item Create new sessions under any patient
+    \item Rename and delete sessions independently
+    \item Each session stores its own message history with timestamps
+    \item Sessions are displayed in a hover-dropdown under each patient name
+\end{itemize}
+
+\textbf{API Endpoints:}
+\begin{itemize}
+    \item \texttt{POST /add\_session} --- Create a new session for a patient
+    \item \texttt{POST /rename\_session} --- Rename a session
+    \item \texttt{POST /delete\_session} --- Delete a session
+\end{itemize}
+
+\section{Module 3: AI Chat Engine}
+
+The core module that enables real-time AI-powered clinical conversations.
+
+\textbf{Features:}
+\begin{itemize}
+    \item Context-aware responses using the last 10 messages from the current session
+    \item Clinically-focused system prompt ensuring empathetic, evidence-based responses
+    \item Safety filter that detects crisis keywords (``suicide'', ``kill myself'', ``self harm'', etc.)
+    \item Automatic helpline number display on crisis detection (iCall: 9152987821, Vandrevala Foundation: 1860-2662-345)
+    \item Message length validation (5000 character maximum)
+    \item Voice input via Web Speech API and text-to-speech output via SpeechSynthesis API
+\end{itemize}
+
+\textbf{System Prompt:}
+The AI is instructed to act as ``MindSync AI, a professional healthcare and mental health assistant'' with directives to be empathetic, clinically accurate, provide evidence-based guidance, reference medications and lab values, use structured responses, and always prioritize patient safety while encouraging professional consultation.
+
+\textbf{API Endpoint:}
+\begin{itemize}
+    \item \texttt{POST /chat} --- Send a message and receive an AI response
+\end{itemize}
+
+\section{Module 4: Clinical Report Generator}
+
+Automated generation of structured clinical reports for any patient based on their conversation history.
+
+\textbf{Report Sections:}
+\begin{enumerate}
+    \item \textbf{Patient Summary} --- Overview of presenting complaints and conditions
+    \item \textbf{Medical Conditions Identified} --- Symptoms, medications, lab values mentioned
+    \item \textbf{Mental Health Assessment} --- Emotional state, anxiety/depression indicators
+    \item \textbf{Risk Level} --- LOW / MODERATE / HIGH with justification
+    \item \textbf{Progress \& Trends} --- Improvements, regressions, or patterns across sessions
+    \item \textbf{Clinical Recommendations} --- Next steps, referrals, lifestyle changes
+\end{enumerate}
+
+\textbf{Features:}
+\begin{itemize}
+    \item One-click report generation from the report overlay
+    \item Patient selector sidebar with session and message counts
+    \item Stats cards displaying total sessions, messages, and average messages per session
+    \item Session-by-session breakdown grid
+    \item Formatted AI analysis with headings, bullet points, and bold text
+    \item Print-friendly report output (opens in new window)
+\end{itemize}
+
+\textbf{API Endpoint:}
+\begin{itemize}
+    \item \texttt{POST /generate\_report} --- Generate a clinical report for a patient
+\end{itemize}
+
+\section{Module 5: Symptom Assessment \& Triage}
+
+A quick AI-powered tool for preliminary symptom evaluation.
+
+\textbf{Output Format:}
+\begin{enumerate}
+    \item \textbf{Possible Conditions} --- 2--4 conditions listed (most likely first)
+    \item \textbf{Urgency Level} --- ROUTINE / SOON / URGENT / EMERGENCY
+    \item \textbf{Recommended Specialist} --- Type of doctor to consult
+    \item \textbf{Immediate Steps} --- What the patient should do now
+\end{enumerate}
+
+\textbf{Features:}
+\begin{itemize}
+    \item Free-text symptom description via a modal textarea
+    \item Loading indicator during AI processing
+    \item Formatted result display with clinical structure
+    \item Clear disclaimer that this is not a medical diagnosis
+\end{itemize}
+
+\textbf{API Endpoint:}
+\begin{itemize}
+    \item \texttt{POST /health\_assessment} --- Submit symptoms for AI triage
+\end{itemize}
+
+\section{Module 6: Mood Tracker}
+
+Enables longitudinal tracking of patient mood patterns.
+
+\textbf{Features:}
+\begin{itemize}
+    \item Mood score slider from 1 (Very Low) to 10 (Excellent)
+    \item Optional text note for context (e.g., ``slept well'', ``stressful day'')
+    \item Per-patient mood logging with automatic timestamps
+    \item Color-coded mood history display:
+    \begin{itemize}
+        \item Red badge: Score 1--3 (Low)
+        \item Yellow badge: Score 4--6 (Moderate)
+        \item Green badge: Score 7--10 (Good)
+    \end{itemize}
+    \item Reverse chronological display of all mood entries
+\end{itemize}
+
+\textbf{API Endpoints:}
+\begin{itemize}
+    \item \texttt{POST /log\_mood} --- Log a mood score for a patient
+    \item \texttt{POST /get\_mood\_logs} --- Retrieve mood history for a patient
+\end{itemize}
+
+% ==================== CHAPTER 5: IMPLEMENTATION ====================
+\chapter{Implementation}
+
+\section{Technology Stack}
+
+\begin{table}[h!]
+\centering
+\caption{Technologies Used}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Component} & \textbf{Technology} \\
+\hline
+Programming Language & Python 3.12 \\
+\hline
+Web Framework & Flask 3.x \\
+\hline
+AI Runtime & Ollama (Local LLM Engine) \\
+\hline
+AI Model & Qwen 2.5:3B (3 billion parameters) \\
+\hline
+Frontend Markup & HTML5 \\
+\hline
+Styling & CSS3 (Custom Properties, Grid, Flexbox, Animations) \\
+\hline
+Frontend Logic & JavaScript ES6+ (Vanilla, no framework) \\
+\hline
+Voice Features & Web Speech API (SpeechRecognition + SpeechSynthesis) \\
+\hline
+Data Storage & JSON file (chat.json) \\
+\hline
+ID Generation & Python UUID module \\
+\hline
+Font & Inter (Google Fonts CDN) \\
+\hline
+Version Control & Git \\
+\hline
+IDE & Visual Studio Code \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Backend Implementation}
+
+The backend is built as a single Flask application (\texttt{app.py}) with 14 RESTful API endpoints.
+
+\subsection{Key Backend Components}
+
+\begin{itemize}
+    \item \textbf{File Helpers:} \texttt{load\_data()}, \texttt{save\_data()}, \texttt{find\_patient()}, \texttt{find\_session()} functions manage JSON file I/O with error recovery for corrupted data.
+    \item \textbf{Safety Filter:} The \texttt{is\_sensitive()} function checks user messages against a list of crisis keywords and returns helpline information instead of passing the message to AI.
+    \item \textbf{AI Integration:} The \texttt{get\_qwen\_response()} function calls Ollama's chat API with temperature 0.7 and top-p 0.9 for balanced, creative responses.
+    \item \textbf{Context Windowing:} Only the last 10 messages from a session are sent to the AI, preventing context overflow while maintaining conversation coherence.
+\end{itemize}
+
+\subsection{API Routes Summary}
+
+\begin{longtable}{|l|l|p{7cm}|}
+\hline
+\textbf{Route} & \textbf{Method} & \textbf{Description} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Route} & \textbf{Method} & \textbf{Description} \\
+\hline
+\endhead
+\texttt{/} & GET & Serve landing page \\
+\hline
+\texttt{/get\_patients} & GET & Retrieve all patients \\
+\hline
+\texttt{/add\_patient} & POST & Create new patient \\
+\hline
+\texttt{/rename\_patient} & POST & Rename patient \\
+\hline
+\texttt{/delete\_patient} & POST & Delete patient \\
+\hline
+\texttt{/add\_session} & POST & Create session under patient \\
+\hline
+\texttt{/rename\_session} & POST & Rename session \\
+\hline
+\texttt{/delete\_session} & POST & Delete session \\
+\hline
+\texttt{/chat} & POST & Send message, receive AI response \\
+\hline
+\texttt{/generate\_report} & POST & Generate clinical report \\
+\hline
+\texttt{/log\_mood} & POST & Log mood score \\
+\hline
+\texttt{/get\_mood\_logs} & POST & Get mood history \\
+\hline
+\texttt{/health\_assessment} & POST & Symptom triage \\
+\hline
+\texttt{/export\_patient} & POST & Export patient data \\
+\hline
+\end{longtable}
+
+\section{Frontend Implementation}
+
+\subsection{User Interface Design}
+
+The frontend uses a dark theme healthcare UI with the following design tokens:
+
+\begin{itemize}
+    \item \textbf{Background:} \texttt{\#060d18} (deep navy)
+    \item \textbf{Primary Color:} \texttt{\#4e9fff} (blue)
+    \item \textbf{Accent Color:} \texttt{\#34d399} (green)
+    \item \textbf{Gradient:} Linear gradient from blue to green (135 degrees)
+    \item \textbf{Font:} Inter (Google Fonts) with system-ui fallback
+    \item \textbf{Border Radius:} 16px / 12px / 8px tier system
+\end{itemize}
+
+\subsection{UI Patterns}
+
+\begin{enumerate}
+    \item \textbf{Loading Screen:} Animated dual-ring spinner with progress bar and 5-step text sequence.
+    \item \textbf{Hero Section:} Dashboard with live counters (patients, sessions, messages) and call-to-action buttons.
+    \item \textbf{Feature Cards:} Four cards with SVG icons for each core feature.
+    \item \textbf{Full-Screen Overlays:} Used for Chat and Report interfaces with sidebar navigation.
+    \item \textbf{Modal Dialogs:} Used for Symptom Assessment and Mood Tracker features.
+\end{enumerate}
+
+\subsection{JavaScript Architecture}
+
+The frontend JavaScript (\texttt{app.js}) follows a procedural architecture with:
+
+\begin{itemize}
+    \item \texttt{apiGet()} / \texttt{apiPost()} --- Centralized HTTP request handlers with error handling
+    \item \texttt{escapeHtml()} --- XSS prevention for all dynamic content rendering
+    \item \texttt{renderPatients()} --- Dynamic sidebar generation with hover dropdowns and context menus
+    \item \texttt{formatAnalysis()} --- Markdown-to-HTML converter for AI output (bold, headings, lists)
+    \item \texttt{animateCounter()} --- Smooth number counting animation for dashboard stats
+    \item \texttt{speak()} --- Text-to-speech wrapper using SpeechSynthesis API
+\end{itemize}
+
+\section{AI Prompt Engineering}
+
+Three distinct system prompts are engineered for different AI tasks:
+
+\begin{enumerate}
+    \item \textbf{Chat Prompt:} Instructs the AI to be empathetic, clinically accurate, reference medications/lab values, use structured responses, and never diagnose---only suggest professional consultation.
+    \item \textbf{Report Prompt:} Directs the AI to analyze patient messages and produce a 6-section structured clinical report with risk level classification.
+    \item \textbf{Triage Prompt:} Guides the AI to evaluate symptoms and return possible conditions, urgency level, specialist recommendation, and immediate steps.
+\end{enumerate}
+
+% ==================== CHAPTER 6: TESTING ====================
+\chapter{Testing and Results}
+
+\section{Functional Testing}
+
+\begin{table}[h!]
+\centering
+\caption{Functional Test Cases}
+\begin{tabularx}{\textwidth}{|c|X|X|c|}
+\hline
+\textbf{\#} & \textbf{Test Case} & \textbf{Expected Result} & \textbf{Status} \\
+\hline
+1 & Create a new patient & Patient appears in sidebar with UUID & Pass \\
+\hline
+2 & Rename a patient & Name updates across all views & Pass \\
+\hline
+3 & Delete a patient & Patient removed from list and JSON & Pass \\
+\hline
+4 & Create a session & Session appears in patient's dropdown & Pass \\
+\hline
+5 & Send chat message & AI responds contextually & Pass \\
+\hline
+6 & Trigger crisis keyword & Safety message with helplines shown & Pass \\
+\hline
+7 & Generate report & Structured report with AI analysis rendered & Pass \\
+\hline
+8 & Submit symptom assessment & Triage output with urgency level displayed & Pass \\
+\hline
+9 & Log mood score & Mood entry saved and displayed in history & Pass \\
+\hline
+10 & Search patients & Filters across names, sessions, messages & Pass \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Edge Case Testing}
+
+\begin{table}[h!]
+\centering
+\caption{Edge Case Test Results}
+\begin{tabularx}{\textwidth}{|c|X|X|c|}
+\hline
+\textbf{\#} & \textbf{Scenario} & \textbf{Expected Behavior} & \textbf{Status} \\
+\hline
+1 & Report for patient with no sessions & Error message displayed & Pass \\
+\hline
+2 & Message exceeding 5000 characters & Rejected with error response & Pass \\
+\hline
+3 & Corrupted chat.json file & Auto-recovery with empty array & Pass \\
+\hline
+4 & Empty patient name on creation & Auto-assigned ``Patient N'' name & Pass \\
+\hline
+5 & Mood score outside 1--10 range & Server-side validation rejects & Pass \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{UI/UX Testing}
+
+\begin{itemize}
+    \item Responsive layout verified at 1024px, 768px, and 480px breakpoints
+    \item Loading screen animation and progress bar render correctly
+    \item Report loading spinner hides properly after report generation (fixed CSS specificity issue with \texttt{!important} on the \texttt{.hidden} class)
+    \item Modal open/close behavior verified for Assessment and Mood modals
+    \item Voice input and text-to-speech output functional in Chrome and Edge
+\end{itemize}
+
+\section{Performance Observations}
+
+\begin{itemize}
+    \item Flask server startup time: $<$ 2 seconds
+    \item AI response latency: 3--8 seconds (hardware dependent)
+    \item Report generation: 5--15 seconds (includes AI analysis)
+    \item Frontend renders 50+ messages without performance degradation
+    \item JSON file storage handles 100+ patient records without noticeable lag
+\end{itemize}
+
+% ==================== CHAPTER 7: SCREENSHOTS ====================
+\chapter{Screenshots}
+
+\textit{Note: Screenshots can be inserted here using the following LaTeX command for each image:}
+
+\begin{verbatim}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{screenshot_filename.png}
+    \caption{Description of the screenshot}
+\end{figure}
+\end{verbatim}
+
+\textbf{Recommended screenshots to capture:}
+\begin{enumerate}
+    \item Landing page / Dashboard with hero section and feature cards
+    \item Loading screen with animated spinner and progress bar
+    \item Chat overlay with patient sidebar and AI conversation
+    \item Clinical report view with stats cards and AI analysis
+    \item Symptom assessment modal with triage output
+    \item Mood tracker modal with slider and history display
+    \item Crisis keyword detection showing helpline numbers
+    \item Print-friendly report output
+\end{enumerate}
+
+% ==================== CHAPTER 8: FUTURE SCOPE ====================
+\chapter{Future Scope}
+
+While MindSync AI demonstrates a functional offline healthcare AI platform, several enhancements can be made in future iterations:
+
+\begin{enumerate}
+    \item \textbf{Interactive Mood Charts:} Replace text-based mood history with interactive line and bar charts using libraries like Chart.js for visual trend analysis.
+
+    \item \textbf{Database Migration:} Migrate from JSON file storage to SQLite or PostgreSQL for improved scalability, concurrency handling, and data integrity.
+
+    \item \textbf{User Authentication:} Implement a login system with role-based access control (doctor vs.\ patient vs.\ admin) to protect patient data in multi-user environments.
+
+    \item \textbf{PDF Report Export:} Generate downloadable PDF clinical reports with custom branding for hospitals and clinics.
+
+    \item \textbf{Larger AI Models:} Support for larger models (Llama 3, Mistral, GPT-4) to improve response accuracy and clinical reasoning.
+
+    \item \textbf{Multi-Language Support:} Add support for Hindi, Tamil, and other regional Indian languages to increase accessibility.
+
+    \item \textbf{Progressive Web App (PWA):} Convert the application into a PWA for mobile device access with offline caching.
+
+    \item \textbf{Continuous Voice Mode:} Implement continuous speech recognition for hands-free clinical documentation.
+
+    \item \textbf{Appointment Scheduling:} Add a module for scheduling follow-up appointments with reminders.
+
+    \item \textbf{Integration with EHR Systems:} Support HL7 FHIR standards for interoperability with Electronic Health Record systems.
+\end{enumerate}
+
+% ==================== CHAPTER 9: CONCLUSION ====================
+\chapter{Conclusion}
+
+MindSync AI successfully demonstrates that a fully offline, AI-powered healthcare intelligence platform is both feasible and practical using current open-source technologies. The project achieves all stated objectives:
+
+\begin{enumerate}
+    \item \textbf{AI-Powered Consultations:} The Qwen 2.5 model delivers contextually relevant, empathetic clinical conversations with structured responses.
+    \item \textbf{Patient Management:} Full CRUD operations for patients and sessions with UUID-based identification and search functionality.
+    \item \textbf{Clinical Reports:} Automated, AI-generated reports with risk level classification, medical condition identification, and actionable recommendations.
+    \item \textbf{Symptom Triage:} Quick AI-powered assessment with urgency levels ranging from ROUTINE to EMERGENCY.
+    \item \textbf{Mood Tracking:} Per-patient mood logging with color-coded visualization and historical review.
+    \item \textbf{Complete Privacy:} Zero cloud dependency---all AI inference and data storage occurs locally.
+    \item \textbf{Modern UI:} Responsive dark-themed design accessible from any device on the local network.
+\end{enumerate}
+
+The safety-first approach---with crisis detection, helpline contacts, input validation, XSS prevention, and clear medical disclaimers---ensures the system supports rather than replaces professional healthcare providers.
+
+MindSync AI contributes a novel approach to healthcare AI by combining five essential clinical modules in a single, privacy-preserving, locally-hosted platform. While limitations exist (3B model accuracy, JSON scalability, no authentication), the platform provides a strong foundation for future development into a production-grade healthcare tool.
+
+% ==================== REFERENCES ====================
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
+
+\begin{enumerate}[label={[\arabic*]}]
+    \item Fitzpatrick, K.\ K., Darcy, A., \& Vierhile, M. (2017). Delivering Cognitive Behavior Therapy to Young Adults With Symptoms of Depression via a Fully Automated Conversational Agent (Woebot): A Randomized Controlled Trial. \textit{JMIR Mental Health}, 4(2), e19.
+
+    \item Inkster, B., Sarda, S., \& Subramanian, V. (2018). An Empathy-Driven, Conversational Artificial Intelligence Agent (Wysa) for Digital Mental Well-Being: Real-World Data Evaluation Mixed-Methods Study. \textit{JMIR mHealth and uHealth}, 6(11), e12106.
+
+    \item Singhal, K., et al. (2023). Large Language Models Encode Clinical Knowledge. \textit{Nature}, 620, 172--180.
+
+    \item Ollama Documentation. \url{https://ollama.com/docs}
+
+    \item Qwen 2.5 Model Card. \url{https://huggingface.co/Qwen/Qwen2.5-3B}
+
+    \item Flask Documentation. \url{https://flask.palletsprojects.com/}
+
+    \item Web Speech API --- MDN Web Docs. \url{https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API}
+
+    \item World Health Organization. (2022). World Mental Health Report: Transforming Mental Health for All. \url{https://www.who.int/publications/i/item/9789240049338}
+\end{enumerate}
+
+% ==================== APPENDIX ====================
+\appendix
+\chapter{Project File Structure}
+
+\begin{verbatim}
+MindSync AI/
+|-- app.py                  # Flask backend (14 API routes)
+|-- chat.json               # Patient data storage
+|-- requirement.txt         # Python dependencies
+|-- generate_ppt.py         # PPT generation script
+|-- templates/
+|   |-- index.html          # Main HTML page
+|-- static/
+|   |-- css/
+|   |   |-- styles.css      # Application stylesheet
+|   |-- js/
+|       |-- app.js          # Frontend JavaScript
+\end{verbatim}
+
+\chapter{Installation Guide}
+
+\begin{enumerate}
+    \item \textbf{Install Python 3.12+} from \url{https://python.org}
+    \item \textbf{Install Ollama} from \url{https://ollama.com}
+    \item \textbf{Pull the AI model:}
+    \begin{verbatim}
+    ollama pull qwen2.5:3b
+    \end{verbatim}
+    \item \textbf{Install Python dependencies:}
+    \begin{verbatim}
+    pip install flask ollama
+    \end{verbatim}
+    \item \textbf{Run the application:}
+    \begin{verbatim}
+    python app.py
+    \end{verbatim}
+    \item \textbf{Open in browser:} \url{http://localhost:5000}
+\end{enumerate}
+
+\end{document}
